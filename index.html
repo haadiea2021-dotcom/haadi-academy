@@ -56,13 +56,28 @@ button {background:#0a5c36; color:white; padding:10px; border:none; width:100%;}
 <p>ماہر اساتذہ ومعلمات</p>
 </section><section id="admission">
 <h2>داخلہ فارم | Admission Form</h2>
-<form>
-<input type="text" placeholder="نام / Name" required>
-<input type="text" placeholder="فون نمبر / Phone" required>
-<input type="email" placeholder="ای میل / Email">
-<textarea placeholder="تفصیلات / Details"></textarea>
+<form onsubmit="sendToWhatsApp(); return false;">
+<input type="text" id="name" placeholder="نام / Name" required>
+<input type="text" id="phone" placeholder="فون نمبر / Phone" required>
+<textarea id="details" placeholder="تفصیلات / Details"></textarea>
 <button type="submit">جمع کریں / Submit</button>
 </form>
+
+<script>
+function sendToWhatsApp() {
+    var name = document.getElementById("name").value;
+    var phone = document.getElementById("phone").value;
+    var details = document.getElementById("details").value;
+
+    var message = "New Admission:%0A"
+        + "Name: " + name + "%0A"
+        + "Phone: " + phone + "%0A"
+        + "Details: " + details;
+
+    var url = "https://wa.me/919108226606?text=" + message;
+    window.open(url, '_blank');
+}
+</script>
 </section><section id="contact">
 <h2>رابطہ کریں | Contact</h2>
 <p>📍 خوشحال نگر کے جی ہلی بنگلور</p>
