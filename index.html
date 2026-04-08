@@ -15,47 +15,31 @@ font-family:Arial;
 background:#f2f6f5;
 }
 
-/* Welcome Screen */
-
-#welcome{
-position:fixed;
-width:100%;
-height:100%;
-background:#0b5d44;
-color:white;
-display:flex;
-justify-content:center;
-align-items:center;
-flex-direction:column;
-z-index:9999;
-text-align:center;
-}
-
-#welcome h1{
-font-size:36px;
-}
-
-#welcome h2{
-color:gold;
-}
-
 /* Header */
 
 header{
-background:linear-gradient(#0b5d44,#01271c);
+background:#0b5d44;
 color:white;
 text-align:center;
 padding:60px 20px;
 }
 
-header img{
-width:120px;
+/* Language button */
+
+.lang{
+position:absolute;
+top:10px;
+right:10px;
+background:gold;
+padding:6px 12px;
+cursor:pointer;
+border-radius:6px;
 }
 
-/* Navigation */
+/* Nav */
 
 nav{
-background:#021a13;
+background:#02261b;
 padding:12px;
 text-align:center;
 }
@@ -67,7 +51,7 @@ text-decoration:none;
 font-weight:bold;
 }
 
-/* Section */
+/* Sections */
 
 section{
 background:white;
@@ -82,47 +66,14 @@ text-align:center;
 color:#0b5d44;
 }
 
-.divider{
-width:100px;
-height:4px;
-background:gold;
-margin:10px auto 25px auto;
-}
-
-/* Grid */
-
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
 gap:20px;
 }
 
 .card{
 background:#e7f3ef;
-padding:20px;
-border-radius:10px;
-text-align:center;
-}
-
-/* Teacher */
-
-.teacher img{
-width:120px;
-border-radius:50%;
-}
-
-/* Gallery */
-
-.gallery img{
-width:100%;
-border-radius:10px;
-}
-
-/* Prayer */
-
-.prayer{
-background:#0b5d44;
-color:white;
 padding:20px;
 border-radius:10px;
 text-align:center;
@@ -134,8 +85,8 @@ input,textarea{
 width:100%;
 padding:10px;
 margin:8px 0;
-border:1px solid #ccc;
 border-radius:6px;
+border:1px solid #ccc;
 }
 
 button{
@@ -144,7 +95,6 @@ color:white;
 border:none;
 padding:10px 20px;
 border-radius:6px;
-cursor:pointer;
 }
 
 /* Footer */
@@ -156,8 +106,6 @@ text-align:center;
 padding:25px;
 }
 
-/* WhatsApp */
-
 .whatsapp{
 position:fixed;
 bottom:20px;
@@ -167,7 +115,6 @@ color:white;
 padding:12px 18px;
 border-radius:30px;
 text-decoration:none;
-font-weight:bold;
 }
 
 </style>
@@ -176,21 +123,13 @@ font-weight:bold;
 
 <body>
 
-<div id="welcome">
-
-<h1>بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْم</h1>
-<p>Welcome To</p>
-<h2>Haadi Educational Academy</h2>
-
-</div>
+<div class="lang" onclick="switchLang()">اردو / English</div>
 
 <header>
 
-<img src="logo.png">
+<h1 id="title">Haadi Educational Academy</h1>
 
-<h1>HAADI EDUCATIONAL ACADEMY</h1>
-
-<p>Islamic Education • Quran • Hifz • Arabic</p>
+<p id="tagline">Islamic Education For Students</p>
 
 </header>
 
@@ -199,10 +138,8 @@ font-weight:bold;
 <a href="#about">About</a>
 <a href="#courses">Courses</a>
 <a href="#teachers">Teachers</a>
-<a href="#gallery">Gallery</a>
 <a href="#events">Events</a>
 <a href="#prayer">Prayer</a>
-<a href="#verify">Student Verify</a>
 <a href="#admission">Admission</a>
 <a href="#contact">Contact</a>
 
@@ -210,13 +147,11 @@ font-weight:bold;
 
 <section id="about">
 
-<h2>About Academy</h2>
+<h2 id="aboutTitle">About Academy</h2>
 
-<div class="divider"></div>
+<p id="aboutText" style="text-align:center">
 
-<p style="text-align:center">
-
-Haadi Educational Academy provides Islamic and moral education for students including Quran recitation, Hifz Quran, Arabic language and Islamic studies.
+Haadi Educational Academy provides Quran, Hifz, Diniyat, Arabic language and Islamic education.
 
 </p>
 
@@ -224,9 +159,7 @@ Haadi Educational Academy provides Islamic and moral education for students incl
 
 <section id="courses">
 
-<h2>Our Courses</h2>
-
-<div class="divider"></div>
+<h2 id="courseTitle">Courses</h2>
 
 <div class="grid">
 
@@ -235,7 +168,6 @@ Haadi Educational Academy provides Islamic and moral education for students incl
 <div class="card">Diniyat</div>
 <div class="card">Arabic Language</div>
 <div class="card">3 Year Alim Course</div>
-<div class="card">Tafseer & Hadith</div>
 
 </div>
 
@@ -243,47 +175,19 @@ Haadi Educational Academy provides Islamic and moral education for students incl
 
 <section id="teachers">
 
-<h2>Our Teachers</h2>
-
-<div class="divider"></div>
+<h2 id="teacherTitle">Teachers</h2>
 
 <div class="grid">
 
-<div class="card teacher">
-
-<img src="teacher1.jpg">
-
+<div class="card">
 <h3>Molana Mohammed Ansar Shahi</h3>
-
 <p>Principal</p>
-
 </div>
 
-<div class="card teacher">
-
-<img src="teacher2.jpg">
-
+<div class="card">
 <h3>Islamic Teacher</h3>
-
 <p>Quran & Hadith</p>
-
 </div>
-
-</div>
-
-</section>
-
-<section id="gallery">
-
-<h2>Gallery</h2>
-
-<div class="divider"></div>
-
-<div class="grid gallery">
-
-<img src="g1.jpg">
-<img src="g2.jpg">
-<img src="g3.jpg">
 
 </div>
 
@@ -291,16 +195,11 @@ Haadi Educational Academy provides Islamic and moral education for students incl
 
 <section id="events">
 
-<h2>Events & Programs</h2>
+<h2 id="eventTitle">Events</h2>
 
-<div class="divider"></div>
+<p id="eventText" style="text-align:center">
 
-<p style="text-align:center">
-
-Annual Islamic Conference  
-Ramadan Special Classes  
-Quran Competition  
-Summer Islamic Camp
+Ramadan Classes • Quran Competition • Islamic Summer Camp
 
 </p>
 
@@ -310,9 +209,7 @@ Summer Islamic Camp
 
 <h2>Bangalore Prayer Times</h2>
 
-<div class="divider"></div>
-
-<div class="prayer" id="prayerTimes">
+<div id="prayerTimes" style="text-align:center">
 
 Loading Prayer Times...
 
@@ -320,47 +217,27 @@ Loading Prayer Times...
 
 </section>
 
-<section id="verify">
-
-<h2>Student Certificate Verification</h2>
-
-<div class="divider"></div>
-
-<input id="studentID" placeholder="Enter Student ID">
-
-<button onclick="verifyStudent()">Verify</button>
-
-<p id="result"></p>
-
-</section>
-
 <section id="admission">
 
-<h2>Online Admission Form</h2>
+<h2 id="admissionTitle">Admission Form</h2>
 
-<div class="divider"></div>
+<input id="name" placeholder="Name">
 
-<input id="name" placeholder="Student Name">
+<input id="phone" placeholder="Phone">
 
-<input id="phone" placeholder="Phone Number">
+<textarea id="course" placeholder="Course"></textarea>
 
-<textarea id="course" placeholder="Course Name"></textarea>
-
-<button onclick="sendWhatsApp()">Submit Admission</button>
+<button onclick="sendWhatsApp()" id="submitBtn">Submit</button>
 
 </section>
 
 <section id="contact">
 
-<h2>Contact Us</h2>
+<h2 id="contactTitle">Contact</h2>
 
-<div class="divider"></div>
+<p>📍 KG Halli Bangalore</p>
 
-<p>📍 Khushal Nagar KG Halli Bangalore</p>
-
-<p>📞 9686654172 / 9108226606</p>
-
-<p>Principal: Molana Mohammed Ansar Shahi</p>
+<p>📞 9686654172</p>
 
 <iframe width="100%" height="250"
 src="https://maps.google.com/maps?q=kg%20halli%20bangalore&t=&z=13&ie=UTF8&iwloc=&output=embed">
@@ -382,11 +259,43 @@ WhatsApp
 
 <script>
 
-/* Welcome */
+/* Language switch */
 
-setTimeout(function(){
-document.getElementById("welcome").style.display="none";
-},3000);
+let urdu=false;
+
+function switchLang(){
+
+urdu=!urdu;
+
+if(urdu){
+
+document.getElementById("title").innerHTML="ہادی ایجوکیشنل اکیڈمی";
+document.getElementById("tagline").innerHTML="طلبہ کے لئے اسلامی تعلیم";
+
+document.getElementById("aboutTitle").innerHTML="اکیڈمی کے بارے میں";
+document.getElementById("aboutText").innerHTML="ہادی ایجوکیشنل اکیڈمی میں قرآن، حفظ، دینیات اور عربی زبان کی تعلیم دی جاتی ہے";
+
+document.getElementById("courseTitle").innerHTML="کورسز";
+
+document.getElementById("teacherTitle").innerHTML="اساتذہ";
+
+document.getElementById("eventTitle").innerHTML="تقریبات";
+
+document.getElementById("admissionTitle").innerHTML="داخلہ فارم";
+
+document.getElementById("submitBtn").innerHTML="جمع کریں";
+
+document.getElementById("contactTitle").innerHTML="رابطہ";
+
+}
+
+else{
+
+location.reload();
+
+}
+
+}
 
 /* WhatsApp */
 
@@ -397,7 +306,7 @@ let phone=document.getElementById("phone").value;
 let course=document.getElementById("course").value;
 
 let url="https://wa.me/919686654172?text="
-+"Admission Request:%0A"
++"Admission:%0A"
 +"Name: "+name+"%0A"
 +"Phone: "+phone+"%0A"
 +"Course: "+course;
@@ -415,6 +324,7 @@ fetch("https://api.aladhan.com/v1/timingsByCity?city=Bangalore&country=India&met
 let t=data.data.timings;
 
 document.getElementById("prayerTimes").innerHTML=
+
 "Fajr: "+t.Fajr+" | "+
 "Dhuhr: "+t.Dhuhr+" | "+
 "Asr: "+t.Asr+" | "+
@@ -422,26 +332,6 @@ document.getElementById("prayerTimes").innerHTML=
 "Isha: "+t.Isha;
 
 });
-
-/* Student Verify */
-
-function verifyStudent(){
-
-let id=document.getElementById("studentID").value;
-
-if(id=="HEA001"){
-
-document.getElementById("result").innerHTML="Valid Student - Haadi Educational Academy";
-
-}
-
-else{
-
-document.getElementById("result").innerHTML="Student Not Found";
-
-}
-
-}
 
 </script>
 
