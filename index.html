@@ -1,104 +1,233 @@
-<!DOCTYPE html><html lang="ur">
+<!DOCTYPE html>
+<html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Haadi Educational Academy</title>
+
 <style>
-body {font-family: Arial; margin:0; padding:0; direction: rtl; background:#f9f9f9;}
-header {background:#0a5c36; color:white; padding:20px; text-align:center;}
-nav {background:#eee; padding:10px; text-align:center;}
-nav a {margin:10px; text-decoration:none; color:#333; font-weight:bold;}
-section {padding:20px; margin:10px; background:white; border-radius:10px;}
-footer {background:#0a5c36; color:white; text-align:center; padding:10px;}
-form input, form textarea {width:100%; padding:10px; margin:5px 0;}
-button {background:#0a5c36; color:white; padding:10px; border:none; width:100%;}
+
+body{
+font-family:Arial;
+margin:0;
+background:#f4f4f4;
+}
+
+/* Header */
+
+header{
+background:#0f6b4f;
+color:white;
+text-align:center;
+padding:40px;
+}
+
+header img{
+max-width:200px;
+}
+
+/* Navigation */
+
+nav{
+background:#083d2c;
+padding:12px;
+text-align:center;
+}
+
+nav a{
+color:white;
+margin:15px;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* Sections */
+
+section{
+background:white;
+margin:20px;
+padding:30px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+h2{
+color:#0f6b4f;
+}
+
+/* Course Cards */
+
+.courses{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
+
+.course{
+background:#eaf5f1;
+padding:20px;
+border-radius:8px;
+text-align:center;
+}
+
+/* Form */
+
+form input,textarea{
+width:100%;
+padding:10px;
+margin:8px 0;
+border:1px solid #ccc;
+border-radius:6px;
+}
+
+button{
+background:#0f6b4f;
+color:white;
+border:none;
+padding:10px 20px;
+border-radius:6px;
+}
+
+/* Footer */
+
+footer{
+background:#222;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:20px;
+}
+
+/* WhatsApp */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:12px 18px;
+border-radius:30px;
+text-decoration:none;
+}
+
+/* Side Islamic Badge */
+
+.side-badge{
+position:fixed;
+left:10px;
+top:50%;
+transform:translateY(-50%);
+width:110px;
+}
+
 </style>
+
 </head>
-<body><header>
-<h1>ھادی ایجوکیشنل اکیڈمی</h1>
-<p>Haadi Educational Academy</p>
-<p>Established 2021</p>
-</header><nav>
-<a href="#home">ہوم</a>
-<a href="#about">تعارف</a>
-<a href="#courses">کورسز</a>
-<a href="#departments">شعبہ جات</a>
-<a href="#admission">داخلہ</a>
-<a href="#contact">رابطہ</a>
-</nav><section id="home">
-<h2>خوش آمدید</h2>
-<p>یہ ایک دینی و عصری تعلیمی ادارہ ہے جہاں طلبہ وطالبات کو قرآن و سنت کی تعلیم دی جاتی ہے۔</p>
-<p>We provide Islamic education for school and college students (boys & girls).</p>
-</section><section id="about">
-<h2>تعارف | About Us</h2>
-<p>ھادی ایجوکیشنل اکیڈمی، خوشحال نگر کے جی ہلی بنگلور میں واقع ایک دینی ادارہ ہے جو 2021 میں قائم ہوا۔</p>
-<p>اس ادارے کا مقصد طلبہ وطالبات کو علم دین سے آراستہ کرنا ہے۔</p><h3>سرپرست</h3>
-<p>حضرت مولانا مفتی محمد اسلم صاحب رشادی وقاسمی</p><h3>بانی و سکریٹری</h3>
-<p>حضرت مولانا محمد انصر صاحب شاہی</p>
-</section><section id="courses">
-<h2>کورسز | Courses</h2>
-<ul>
-<li>ناظرہ قرآن مجید</li>
-<li>حفظ قرآن کورس</li>
-<li>دینیات</li>
-<li>3 سالہ علم دین کورس</li>
-</ul>
-</section><section id="departments">
-<h2>شعبہ جات | Departments</h2>
-<ul>
-<li>آن لائن کلاسز</li>
-<li>آفلائن کلاسز</li>
-<li>بچوں اور بچیوں کے لیے علیحدہ انتظام</li>
-</ul><h3>اوقات</h3>
-<p>صبح: 06:30 تا 08:00</p>
-<p>شام: 05:00 تا 06:30</p>
-<p>شام: 06:30 تا 08:00</p><h3>اساتذہ</h3>
-<p>ماہر اساتذہ ومعلمات</p>
-</section><section id="admission">
-<h2>داخلہ فارم | Admission Form</h2>
-<form onsubmit="sendToWhatsApp(); return false;">
-<input type="text" id="name" placeholder="نام / Name" required>
-<input type="text" id="phone" placeholder="فون نمبر / Phone" required>
-<textarea id="details" placeholder="تفصیلات / Details"></textarea>
-<button type="submit">جمع کریں / Submit</button>
+
+<body>
+
+<!-- Header -->
+
+<header>
+
+<img src="hea-logo.png">
+
+<h1>HAADI EDUCATIONAL ACADEMY</h1>
+
+<p>Khushal Nagar K G Halli Bangalore</p>
+
+</header>
+
+<!-- Navigation -->
+
+<nav>
+
+<a href="#courses">Courses</a>
+
+<a href="#admission">Admission</a>
+
+<a href="#contact">Contact</a>
+
+</nav>
+
+<!-- Courses -->
+
+<section id="courses">
+
+<h2>Our Courses</h2>
+
+<div class="courses">
+
+<div class="course">Nazira Quran</div>
+
+<div class="course">Hifz Quran</div>
+
+<div class="course">Diniyat</div>
+
+<div class="course">3 Year Alim Course</div>
+
+</div>
+
+</section>
+
+<!-- Admission -->
+
+<section id="admission">
+
+<h2>Admission Form</h2>
+
+<form>
+
+<input type="text" placeholder="Name" required>
+
+<input type="text" placeholder="Phone Number" required>
+
+<input type="email" placeholder="Email">
+
+<textarea placeholder="Details"></textarea>
+
+<button type="submit">Submit</button>
+
 </form>
 
-<script>
-function sendToWhatsApp() {
-    var name = document.getElementById("name").value;
-    var phone = document.getElementById("phone").value;
-    var details = document.getElementById("details").value;
+</section>
 
-    var message = "New Admission:%0A"
-        + "Name: " + name + "%0A"
-        + "Phone: " + phone + "%0A"
-        + "Details: " + details;
+<!-- Contact -->
 
-    var url = "https://wa.me/919108226606?text=" + message;
-    window.open(url, '_blank');
-}
-</script>
-</section><section id="contact">
-<h2>رابطہ کریں | Contact</h2>
-<p>📍 خوشحال نگر کے جی ہلی بنگلور</p>
+<section id="contact">
+
+<h2>Contact Us</h2>
+
+<p>📍 Khushal Nagar K G Halli Bangalore</p>
+
 <p>📞 9686654172 / 9108226606</p>
-<p>پرنسپل: مولانا محمد انصر صاحب شاہی</p>
-<p>آرگنائزر: ھادی ایجوکیشنل اکیڈمی ٹرسٹ بنگلور</p>
-</section><footer>
-<p>© 2026 Haadi Educational Academy</p>
-</footer></body>
 
-<!-- WhatsApp Button -->
-<a href="https://wa.me/919108226606" target="_blank" 
-style="position:fixed;bottom:20px;left:20px;background:#25D366;color:white;padding:12px 15px;border-radius:50px;text-decoration:none;">
+<p>Principal: Molana Mohammed Ansar Shahi</p>
+
+</section>
+
+<!-- Footer -->
+
+<footer>
+
+<p>© 2026 Haadi Educational Academy</p>
+
+</footer>
+
+<!-- WhatsApp -->
+
+<a class="whatsapp" href="https://wa.me/919686654172" target="_blank">
+
 WhatsApp
+
 </a>
 
-<!-- Google Map -->
-<section>
-<h2>Location | لوکیشن</h2>
-<iframe src="https://maps.google.com/maps?q=KG%20Halli%20Bangalore&t=&z=13&ie=UTF8&iwloc=&output=embed" 
-width="100%" height="250" style="border:0;"></iframe>
-</section>
-  
+<!-- Side Islamic Badge -->
+
+<img src="badge.png" class="side-badge">
+
+</body>
 </html>
