@@ -13,16 +13,16 @@
 body{
 margin:0;
 font-family:Arial;
-background:#f0f5f3;
+background:#eef4f2;
 }
 
 /* Header */
 
 header{
-background:linear-gradient(#0f6b4f,#063728);
+background:linear-gradient(#0f6b4f,#04281d);
 color:white;
 text-align:center;
-padding:50px 20px;
+padding:60px 20px;
 }
 
 header img{
@@ -32,7 +32,7 @@ width:150px;
 /* Navigation */
 
 nav{
-background:#04281d;
+background:#021a13;
 padding:12px;
 text-align:center;
 }
@@ -48,13 +48,13 @@ font-weight:bold;
 
 .hero{
 background:url('logo.png') center/cover no-repeat;
-height:320px;
+height:340px;
 display:flex;
 align-items:center;
 justify-content:center;
 color:white;
-font-size:30px;
-text-shadow:2px 2px 6px black;
+font-size:32px;
+text-shadow:2px 2px 8px black;
 }
 
 /* Sections */
@@ -81,7 +81,7 @@ gap:20px;
 }
 
 .course{
-background:#e6f3ef;
+background:#e7f3ef;
 padding:20px;
 border-radius:8px;
 text-align:center;
@@ -117,6 +117,7 @@ color:white;
 padding:10px 20px;
 border:none;
 border-radius:6px;
+cursor:pointer;
 }
 
 /* Footer */
@@ -163,6 +164,26 @@ margin:10px auto 30px auto;
 
 </style>
 
+<script>
+
+function sendWhatsApp(){
+
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+let message=document.getElementById("message").value;
+
+let url="https://wa.me/919686654172?text="
++"Admission Request:%0A"
++"Name: "+name+"%0A"
++"Phone: "+phone+"%0A"
++"Details: "+message;
+
+window.open(url,'_blank');
+
+}
+
+</script>
+
 </head>
 
 <body>
@@ -179,7 +200,6 @@ margin:10px auto 30px auto;
 
 <nav>
 
-<a href="#home">Home</a>
 <a href="#about">About</a>
 <a href="#courses">Courses</a>
 <a href="#gallery">Gallery</a>
@@ -202,8 +222,7 @@ Welcome To Haadi Educational Academy
 
 <p>
 
-Haadi Educational Academy provides Islamic and moral education for students.  
-Our mission is to spread the knowledge of Quran, Hadith and Islamic teachings in a modern educational environment.
+Haadi Educational Academy provides Islamic education, Quran learning and moral training for students.
 
 </p>
 
@@ -250,19 +269,13 @@ Our mission is to spread the knowledge of Quran, Hadith and Islamic teachings in
 
 <div class="divider"></div>
 
-<form>
+<input id="name" type="text" placeholder="Name">
 
-<input type="text" placeholder="Name">
+<input id="phone" type="text" placeholder="Phone Number">
 
-<input type="text" placeholder="Phone Number">
+<textarea id="message" placeholder="Details"></textarea>
 
-<input type="email" placeholder="Email">
-
-<textarea placeholder="Details"></textarea>
-
-<button>Submit</button>
-
-</form>
+<button onclick="sendWhatsApp()">Send on WhatsApp</button>
 
 </section>
 
