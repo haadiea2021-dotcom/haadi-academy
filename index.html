@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Haadi Educational Academy - Preview</title>
+<title>Haadi Educational Academy</title>
 <link href="https://fonts.googleapis.com/css2?family=Jameel+Noori+Nastaleeq&display=swap" rel="stylesheet">
 <style>
 body{margin:0;font-family:Arial, sans-serif;background:#f2f6f5;}
@@ -87,18 +87,21 @@ iframe{border-radius:10px;}
 <section id="youtube">
 <h2>YouTube Channels / یوٹیوب چینلز</h2>
 <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:15px;">
+
+<!-- Hadi Academy Channel -->
 <div class="card">
 <h3 class="urdu">ہادی ایجوکیشنل اکیڈمی</h3>
-<iframe width="100%" height="200" src="https://www.youtube.com/embed/Z3LH2wYc8cU" allowfullscreen></iframe>
-<iframe width="100%" height="200" src="https://www.youtube.com/embed/6LZ1B4C3jH4" allowfullscreen></iframe>
+<iframe width="100%" height="200" src="https://www.youtube.com/embed?listType=user_uploads&list=haadieducationalacadamy" frameborder="0" allowfullscreen></iframe>
 <a href="https://youtube.com/@haadieducationalacadamy" target="_blank" style="background:red;color:white;padding:10px 20px;border-radius:6px;text-decoration:none;display:inline-block;margin-top:5px;">Subscribe @HadiAcademy</a>
 </div>
+
+<!-- Maulana Ansar Shahi Channel -->
 <div class="card">
 <h3 class="urdu">مولانا انصار شاہی آفیشل</h3>
-<iframe width="100%" height="200" src="https://www.youtube.com/embed/lVaHLAI5J_c" allowfullscreen></iframe>
-<iframe width="100%" height="200" src="https://www.youtube.com/embed/eQVV7AMXDbs" allowfullscreen></iframe>
+<iframe width="100%" height="200" src="https://www.youtube.com/embed?listType=user_uploads&list=maulanaansarshahiofficial" frameborder="0" allowfullscreen></iframe>
 <a href="https://youtube.com/@maulanaansarshahiofficial?si=7vyHjiBsNGysp7Ft" target="_blank" style="background:red;color:white;padding:10px 20px;border-radius:6px;text-decoration:none;display:inline-block;margin-top:5px;">Subscribe @MaulanaAnsarShahiOfficial</a>
 </div>
+
 </div>
 </section>
 
@@ -149,17 +152,47 @@ iframe{border-radius:10px;}
 <a class="whatsapp" href="https://wa.me/919686654172" target="_blank">WhatsApp</a>
 
 <script>
-// Prayer Times with Hanafi Asr
-function formatTime24to12(time24){let [h,m]=time24.split(":").map(Number); let suffix=h>=12?"PM":"AM"; h=h%12||12; return h+":"+m.toString().padStart(2,'0')+" "+suffix;}
+// Prayer Times with correct Hanafi Asr
+function formatTime24to12(time24){
+    let [h,m]=time24.split(":").map(Number);
+    let suffix=h>=12?"PM":"AM";
+    h=h%12||12;
+    return h+":"+m.toString().padStart(2,'0')+" "+suffix;
+}
+
 fetch("https://api.aladhan.com/v1/timingsByCity?city=Bangalore&country=India&method=2&school=1")
-.then(r=>r.json()).then(data=>{
-let t=data.data.timings;
-document.getElementById("prayerTimes").innerHTML=
-"Fajr: "+formatTime24to12(t.Fajr)+" | Dhuhr: "+formatTime24to12(t.Dhuhr)+" | Asr (Hanafi): "+formatTime24to12(t.Asr)+" | Maghrib: "+formatTime24to12(t.Maghrib)+" | Isha: "+formatTime24to12(t.Isha);
+.then(r=>r.json())
+.then(data=>{
+    let t=data.data.timings;
+    document.getElementById("prayerTimes").innerHTML=
+        "Fajr: "+formatTime24to12(t.Fajr)+" | "+
+        "Dhuhr: "+formatTime24to12(t.Dhuhr)+" | "+
+        "Asr (Hanafi): "+formatTime24to12(t.Asr)+" | "+
+        "Maghrib: "+formatTime24to12(t.Maghrib)+" | "+
+        "Isha: "+formatTime24to12(t.Isha);
 });
-function sendWhatsApp(){let n=document.getElementById("name").value.trim(); let p=document.getElementById("phone").value.trim(); let c=document.getElementById("course").value.trim(); if(!n||!p||!c){alert("تمام فیلڈز پر کریں / Please fill all fields");return;} if(!/^[0-9]{10}$/.test(p)){alert("براہ کرم درست فون نمبر درج کریں / Enter valid 10-digit phone number");return;} window.open("https://wa.me/919686654172?text=Admission Request:%0AName: "+n+"%0APhone: "+p+"%0ACourse: "+c,'_blank');}
-function verifyStudent(){let id=document.getElementById("studentID").value; document.getElementById("verifyResult").innerHTML=(id=="HEA001")?"Valid Student / درست طالب علم":"Student Not Found / طالب علم نہیں ملا";}
-function checkResult(){let roll=document.getElementById("roll").value; document.getElementById("resultOutput").innerHTML=(roll=="101")?"Result: PASS / کامیاب":"Result Not Found / نتیجہ نہیں ملا";}
+
+// WhatsApp Admission Form
+function sendWhatsApp(){
+    let n=document.getElementById("name").value.trim();
+    let p=document.getElementById("phone").value.trim();
+    let c=document.getElementById("course").value.trim();
+    if(!n||!p||!c){alert("تمام فیلڈز پر کریں / Please fill all fields"); return;}
+    if(!/^[0-9]{10}$/.test(p)){alert("براہ کرم درست فون نمبر درج کریں / Enter valid 10-digit phone number"); return;}
+    window.open("https://wa.me/919686654172?text=Admission Request:%0AName: "+n+"%0APhone: "+p+"%0ACourse: "+c,'_blank');
+}
+
+// Student Verify
+function verifyStudent(){
+    let id=document.getElementById("studentID").value;
+    document.getElementById("verifyResult").innerHTML=(id=="HEA001")?"Valid Student / درست طالب علم":"Student Not Found / طالب علم نہیں ملا";
+}
+
+// Result
+function checkResult(){
+    let roll=document.getElementById("roll").value;
+    document.getElementById("resultOutput").innerHTML=(roll=="101")?"Result: PASS / کامیاب":"Result Not Found / نتیجہ نہیں ملا";
+}
 </script>
 
 </body>
