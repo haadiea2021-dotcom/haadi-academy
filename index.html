@@ -16,6 +16,33 @@ font-family:Arial;
 background:#eef4f2;
 }
 
+/* Welcome Screen */
+
+#welcome{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#0f6b4f;
+color:white;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+font-size:28px;
+z-index:9999;
+text-align:center;
+}
+
+#welcome h1{
+font-size:36px;
+}
+
+#welcome h2{
+color:gold;
+}
+
 /* Header */
 
 header{
@@ -23,11 +50,6 @@ background:linear-gradient(#0f6b4f,#04281d);
 color:white;
 text-align:center;
 padding:70px 20px;
-}
-
-header h1{
-font-size:38px;
-margin:10px 0;
 }
 
 /* Navigation */
@@ -45,17 +67,19 @@ text-decoration:none;
 font-weight:bold;
 }
 
-/* Hero */
+/* Slider */
 
-.hero{
-background:url('logo.png') center/cover no-repeat;
-height:350px;
-display:flex;
-align-items:center;
-justify-content:center;
-color:white;
-font-size:34px;
-text-shadow:2px 2px 8px black;
+.slider{
+width:100%;
+max-width:900px;
+margin:auto;
+overflow:hidden;
+}
+
+.slide{
+width:100%;
+display:none;
+border-radius:10px;
 }
 
 /* Sections */
@@ -116,17 +140,14 @@ padding:20px;
 border-radius:10px;
 }
 
-/* Gallery */
+/* Prayer Time */
 
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:15px;
-}
-
-.gallery img{
-width:100%;
-border-radius:8px;
+.prayer{
+background:#0f6b4f;
+color:white;
+padding:20px;
+text-align:center;
+border-radius:10px;
 }
 
 /* Form */
@@ -157,7 +178,7 @@ text-align:center;
 padding:25px;
 }
 
-/* WhatsApp */
+/* WhatsApp Button */
 
 .whatsapp{
 position:fixed;
@@ -173,29 +194,17 @@ font-weight:bold;
 
 </style>
 
-<script>
-
-function sendWhatsApp(){
-
-let name=document.getElementById("name").value;
-let phone=document.getElementById("phone").value;
-let message=document.getElementById("message").value;
-
-let url="https://wa.me/919686654172?text="
-+"Admission Request:%0A"
-+"Name: "+name+"%0A"
-+"Phone: "+phone+"%0A"
-+"Details: "+message;
-
-window.open(url,'_blank');
-
-}
-
-</script>
-
 </head>
 
 <body>
+
+<div id="welcome">
+
+<h1>بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْم</h1>
+<p>Welcome To</p>
+<h2>Haadi Educational Academy</h2>
+
+</div>
 
 <header>
 
@@ -206,37 +215,35 @@ window.open(url,'_blank');
 
 <nav>
 
-<a href="#about">About</a>
+<a href="#gallery">Gallery</a>
 <a href="#courses">Courses</a>
 <a href="#teachers">Teachers</a>
-<a href="#gallery">Gallery</a>
+<a href="#prayer">Prayer Time</a>
 <a href="#admission">Admission</a>
 <a href="#contact">Contact</a>
 
 </nav>
 
-<div class="hero">
+<section id="gallery">
 
-Welcome To Haadi Educational Academy
+<h2>Academy Gallery</h2>
 
-</div>
-
-<section id="about">
-
-<h2>About Our Academy</h2>
 <div class="divider"></div>
 
-<p>
+<div class="slider">
 
-Haadi Educational Academy provides Quran education, Islamic studies and moral training for students.
+<img class="slide" src="logo.png">
+<img class="slide" src="title.png">
+<img class="slide" src="hea-logo.png">
 
-</p>
+</div>
 
 </section>
 
 <section id="courses">
 
 <h2>Our Courses</h2>
+
 <div class="divider"></div>
 
 <div class="courses">
@@ -255,65 +262,43 @@ Haadi Educational Academy provides Quran education, Islamic studies and moral tr
 <section id="teachers">
 
 <h2>Our Teachers</h2>
+
 <div class="divider"></div>
 
 <div class="teachers">
 
 <div class="teacher">
-
 <img src="teacher1.jpg">
-
 <h3>Molana Mohammed Ansar Shahi</h3>
-
 <p>Principal</p>
-
 </div>
 
 <div class="teacher">
-
 <img src="teacher2.jpg">
-
 <h3>Islamic Teacher</h3>
-
 <p>Quran & Hadith</p>
-
 </div>
 
 </div>
 
 </section>
 
-<section id="gallery">
+<section id="prayer">
 
-<h2>Students Gallery</h2>
+<h2>Bangalore Prayer Times</h2>
+
 <div class="divider"></div>
 
-<div class="gallery">
-
-<img src="logo.png">
-<img src="title.png">
-<img src="hea-logo.png">
-
+<div class="prayer" id="prayertimes">
+Loading Prayer Times...
 </div>
-
-</section>
-
-<section style="text-align:center">
-
-<h2>Download Prospectus</h2>
-<div class="divider"></div>
-
-<a href="prospectus.pdf">
-
-<button>Download Prospectus</button>
-
-</a>
 
 </section>
 
 <section id="admission">
 
 <h2>Admission Form</h2>
+
 <div class="divider"></div>
 
 <input id="name" type="text" placeholder="Name">
@@ -329,6 +314,7 @@ Haadi Educational Academy provides Quran education, Islamic studies and moral tr
 <section id="contact">
 
 <h2>Contact Us</h2>
+
 <div class="divider"></div>
 
 <p>📍 Khushal Nagar K G Halli Bangalore</p>
@@ -350,6 +336,79 @@ Haadi Educational Academy provides Quran education, Islamic studies and moral tr
 WhatsApp
 
 </a>
+
+<script>
+
+/* Welcome Screen */
+
+setTimeout(function(){
+document.getElementById("welcome").style.display="none";
+},3000);
+
+/* Slider */
+
+let index=0;
+
+function showSlides(){
+
+let slides=document.getElementsByClassName("slide");
+
+for(let i=0;i<slides.length;i++){
+slides[i].style.display="none";
+}
+
+index++;
+
+if(index>slides.length){
+index=1;
+}
+
+slides[index-1].style.display="block";
+
+setTimeout(showSlides,3000);
+
+}
+
+showSlides();
+
+/* WhatsApp Form */
+
+function sendWhatsApp(){
+
+let name=document.getElementById("name").value;
+
+let phone=document.getElementById("phone").value;
+
+let message=document.getElementById("message").value;
+
+let url="https://wa.me/919686654172?text="
++"Admission Request:%0A"
++"Name: "+name+"%0A"
++"Phone: "+phone+"%0A"
++"Details: "+message;
+
+window.open(url,'_blank');
+
+}
+
+/* Prayer Times API */
+
+fetch("https://api.aladhan.com/v1/timingsByCity?city=Bangalore&country=India&method=2")
+.then(response=>response.json())
+.then(data=>{
+
+let t=data.data.timings;
+
+document.getElementById("prayertimes").innerHTML=
+"Fajr: "+t.Fajr+" | "+
+"Dhuhr: "+t.Dhuhr+" | "+
+"Asr: "+t.Asr+" | "+
+"Maghrib: "+t.Maghrib+" | "+
+"Isha: "+t.Isha;
+
+});
+
+</script>
 
 </body>
 </html>
