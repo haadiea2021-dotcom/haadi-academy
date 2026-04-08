@@ -2,398 +2,300 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Haadi Educational Academy</title>
-
 <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
-
 <style>
-
 body{
-margin:0;
-font-family:Arial;
-background:#f2f6f5;
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f2f6f5;
 }
-
 .urdu{
-font-family:'Noto Nastaliq Urdu', serif;
-direction:rtl;
-line-height:2;
-font-size:20px;
+    font-family:'Noto Nastaliq Urdu', serif;
+    direction:rtl;
+    line-height:2;
+    font-size:20px;
 }
-
+.bilingual{
+    display:flex;
+    flex-direction:column;
+}
+.bilingual p{
+    margin:5px 0;
+}
 header{
-background:linear-gradient(#0b5d44,#01271c);
-color:white;
-text-align:center;
-padding:60px;
+    background:linear-gradient(#0b5d44,#01271c);
+    color:white;
+    text-align:center;
+    padding:60px 20px;
 }
-
 header img{
-width:120px;
+    width:120px;
 }
-
 nav{
-background:#021a13;
-text-align:center;
-padding:12px;
+    background:#021a13;
+    text-align:center;
+    padding:12px;
 }
-
 nav a{
-color:white;
-margin:12px;
-text-decoration:none;
-font-weight:bold;
+    color:white;
+    margin:12px;
+    text-decoration:none;
+    font-weight:bold;
 }
-
 section{
-background:white;
-margin:20px;
-padding:30px;
-border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
+    background:white;
+    margin:20px;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
 }
-
 h2{
-text-align:center;
-color:#0b5d44;
+    text-align:center;
+    color:#0b5d44;
 }
-
 .grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
 }
-
 .card{
-background:#e7f3ef;
-padding:20px;
-border-radius:10px;
-text-align:center;
+    background:#e7f3ef;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
 }
-
 .notice{
-background:#fff3cd;
-padding:15px;
-border-radius:8px;
+    background:#fff3cd;
+    padding:15px;
+    border-radius:8px;
 }
-
 input,textarea{
-width:100%;
-padding:10px;
-margin:8px 0;
-border:1px solid #ccc;
-border-radius:6px;
+    width:100%;
+    padding:10px;
+    margin:8px 0;
+    border:1px solid #ccc;
+    border-radius:6px;
 }
-
 button{
-background:#0b5d44;
-color:white;
-border:none;
-padding:10px 20px;
-border-radius:6px;
-cursor:pointer;
+    background:#0b5d44;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:6px;
+    cursor:pointer;
 }
-
 footer{
-background:#111;
-color:white;
-text-align:center;
-padding:20px;
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:20px;
 }
-
 .whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:12px 18px;
-border-radius:30px;
-text-decoration:none;
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    padding:12px 18px;
+    border-radius:30px;
+    text-decoration:none;
 }
-
+@media(max-width:600px){
+    header h1{font-size:24px;}
+    .urdu{font-size:18px;}
+    nav a{display:block;margin:8px;}
+}
 </style>
-
 </head>
 
 <body>
 
 <header>
-
-<img src="logo.png">
-
-<h1>Haadi Educational Academy</h1>
-
-<p>Islamic Education For Students</p>
-
-<h2 class="urdu">ہادی ایجوکیشنل اکیڈمی</h2>
-
+    <img src="logo.png" alt="Haadi Logo">
+    <h1>Haadi Educational Academy</h1>
+    <p>Islamic Education For Students</p>
+    <h2 class="urdu">ہادی ایجوکیشنل اکیڈمی</h2>
 </header>
 
 <nav>
-
-<a href="#about">About</a>
-<a href="#courses">Courses</a>
-<a href="#teachers">Teachers</a>
-<a href="#gallery">Gallery</a>
-<a href="#youtube">YouTube</a>
-<a href="#notice">Notice</a>
-<a href="#prayer">Prayer</a>
-<a href="#verify">Verify</a>
-<a href="#result">Result</a>
-<a href="#admission">Admission</a>
-<a href="#contact">Contact</a>
-
+    <a href="#about">About</a>
+    <a href="#courses">Courses</a>
+    <a href="#teachers">Teachers</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#youtube">YouTube</a>
+    <a href="#notice">Notice</a>
+    <a href="#prayer">Prayer</a>
+    <a href="#verify">Verify</a>
+    <a href="#result">Result</a>
+    <a href="#admission">Admission</a>
+    <a href="#contact">Contact</a>
 </nav>
 
 <section id="about">
-
-<h2>About Academy</h2>
-
-<p class="urdu">
-ہادی ایجوکیشنل اکیڈمی میں قرآن مجید، حفظ قرآن، دینیات،
-اور عربی زبان کی تعلیم دی جاتی ہے۔
-</p>
-
+<h2>About Academy / اکیڈمی کے بارے میں</h2>
+<div class="bilingual">
+<p class="urdu">ہادی ایجوکیشنل اکیڈمی میں قرآن مجید، حفظ قرآن، دینیات، اور عربی زبان کی تعلیم دی جاتی ہے۔</p>
+<p>Haadi Educational Academy provides Quranic education, Hifz, Islamic studies, and Arabic language courses.</p>
+</div>
 </section>
 
 <section id="courses">
-
-<h2>Courses</h2>
-
+<h2>Courses / کورسز</h2>
 <div class="grid">
-
-<div class="card">Nazira Quran</div>
-<div class="card">Hifz Quran</div>
-<div class="card">Diniyat</div>
-<div class="card">Arabic Language</div>
-<div class="card">3 Year Alim Course</div>
-
+<div class="card"><p class="urdu">ناظیرہ قرآن</p><p>Nazira Quran</p></div>
+<div class="card"><p class="urdu">حفظ قرآن</p><p>Hifz Quran</p></div>
+<div class="card"><p class="urdu">دینیات</p><p>Diniyat</p></div>
+<div class="card"><p class="urdu">عربی زبان</p><p>Arabic Language</p></div>
+<div class="card"><p class="urdu">3 سالہ علم دین کورس</p><p>3 Year Alim Course</p></div>
 </div>
-
 </section>
 
 <section id="teachers">
-
-<h2>Teachers</h2>
-
+<h2>Teachers / اساتذہ</h2>
 <div class="grid">
-
 <div class="card">
-
 <h3>Molana Mohammed Ansar Shahi</h3>
-
+<p class="urdu">پرنسپل</p>
 <p>Principal</p>
-
 </div>
-
 </div>
-
 </section>
 
 <section id="gallery">
-
-<h2>Gallery</h2>
-
+<h2>Gallery / گیلری</h2>
 <div class="grid">
-
-<div class="card">Academy Program</div>
-<div class="card">Students Class</div>
-<div class="card">Quran Competition</div>
-
+<div class="card"><p class="urdu">اکیڈمی پروگرام</p><p>Academy Program</p></div>
+<div class="card"><p class="urdu">طلبہ کلاس</p><p>Students Class</p></div>
+<div class="card"><p class="urdu">قرآن مقابلہ</p><p>Quran Competition</p></div>
 </div>
-
 </section>
 
 <section id="youtube">
-
-<h2>YouTube Channel</h2>
-
-<iframe width="100%" height="400"
-src="https://www.youtube.com/embed?listType=user_uploads&list=haadieducationalacadamy"
-frameborder="0" allowfullscreen>
-</iframe>
-
-<br><br>
-
-<a href="https://youtube.com/@haadieducationalacadamy"
-target="_blank"
+<h2>YouTube Channel / یوٹیوب چینل</h2>
+<div id="youtubeVideos" class="grid"></div>
+<br>
+<a href="https://youtube.com/@haadieducationalacadamy" target="_blank"
 style="background:red;color:white;padding:10px 20px;border-radius:6px;text-decoration:none;">
 Subscribe Channel
 </a>
-
 </section>
 
 <section id="notice">
-
-<h2>Notice Board</h2>
-
+<h2>Notice Board / نوٹس بورڈ</h2>
 <div class="notice">
-
-Admissions Open 2026<br>
-Islamic Summer Camp<br>
-Quran Competition
-
+<p class="urdu">داخلے شروع 2026<br>اسلامی سمر کیمپ<br>قرآن مقابلہ</p>
+<p>Admissions Open 2026<br>Islamic Summer Camp<br>Quran Competition</p>
 </div>
-
 </section>
 
 <section id="prayer">
-
-<h2>Prayer Times (Bangalore)</h2>
-
-<div id="prayerTimes" style="text-align:center">
-
-Loading Prayer Times...
-
-</div>
-
+<h2>Prayer Times / نماز کے اوقات (Bangalore)</h2>
+<div id="prayerTimes" style="text-align:center">Loading Prayer Times...</div>
 </section>
 
 <section id="verify">
-
-<h2>Student Verification</h2>
-
+<h2>Student Verification / طالب علم کی تصدیق</h2>
 <input id="studentID" placeholder="Student ID">
-
 <button onclick="verifyStudent()">Verify</button>
-
 <p id="verifyResult"></p>
-
 </section>
 
 <section id="result">
-
-<h2>Student Result</h2>
-
+<h2>Student Result / طالب علم کا نتیجہ</h2>
 <input id="roll" placeholder="Roll Number">
-
 <button onclick="checkResult()">Check Result</button>
-
 <p id="resultOutput"></p>
-
 </section>
 
 <section id="admission">
-
-<h2>Admission Form</h2>
-
-<input id="name" placeholder="Name">
-
-<input id="phone" placeholder="Phone">
-
-<textarea id="course" placeholder="Course"></textarea>
-
+<h2>Admission Form / داخلہ فارم</h2>
+<input id="name" placeholder="Name / نام">
+<input id="phone" placeholder="Phone / فون">
+<textarea id="course" placeholder="Course / کورس"></textarea>
 <button onclick="sendWhatsApp()">Submit</button>
-
 </section>
 
 <section id="contact">
-
-<h2>Contact</h2>
-
+<h2>Contact / رابطہ</h2>
 <p>📍 KG Halli Bangalore</p>
-
 <p>📞 9686654172</p>
-
 <iframe width="100%" height="250"
-src="https://maps.google.com/maps?q=kg%20halli%20bangalore&t=&z=13&ie=UTF8&iwloc=&output=embed">
-</iframe>
-
+src="https://maps.google.com/maps?q=kg%20halli%20bangalore&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
 </section>
 
 <footer>
-
 <p>© 2026 Haadi Educational Academy</p>
-
 </footer>
 
-<a class="whatsapp" href="https://wa.me/919686654172" target="_blank">
-
-WhatsApp
-
-</a>
+<a class="whatsapp" href="https://wa.me/919686654172" target="_blank">WhatsApp</a>
 
 <script>
+// 12-hour format
+function formatTime24to12(time24){
+    let [hour,min]=time24.split(":").map(Number);
+    let suffix = hour>=12?"PM":"AM";
+    hour = hour%12 || 12;
+    return hour+":"+min.toString().padStart(2,'0')+" "+suffix;
+}
 
-/* Prayer Times */
-
+// Prayer times
 fetch("https://api.aladhan.com/v1/timingsByCity?city=Bangalore&country=India&method=2")
-
-.then(response=>response.json())
-
+.then(res=>res.json())
 .then(data=>{
-
-let t=data.data.timings;
-
-document.getElementById("prayerTimes").innerHTML=
-
-"Fajr: "+t.Fajr+" AM | "+
-"Dhuhr: "+t.Dhuhr+" PM | "+
-"Asr (Hanafi): "+t.Asr+" PM | "+
-"Maghrib: "+t.Maghrib+" PM | "+
-"Isha: "+t.Isha+" PM";
-
+    let t=data.data.timings;
+    document.getElementById("prayerTimes").innerHTML=
+        "Fajr: "+formatTime24to12(t.Fajr)+" | "+
+        "Dhuhr: "+formatTime24to12(t.Dhuhr)+" | "+
+        "Asr (Hanafi): "+formatTime24to12(t.Asr)+" | "+
+        "Maghrib: "+formatTime24to12(t.Maghrib)+" | "+
+        "Isha: "+formatTime24to12(t.Isha);
 });
 
-/* WhatsApp Form */
-
+// WhatsApp Form
 function sendWhatsApp(){
-
-let name=document.getElementById("name").value;
-let phone=document.getElementById("phone").value;
-let course=document.getElementById("course").value;
-
-let url="https://wa.me/919686654172?text="
-+"Admission Request:%0A"
-+"Name: "+name+"%0A"
-+"Phone: "+phone+"%0A"
-+"Course: "+course;
-
-window.open(url,'_blank');
-
+    let name=document.getElementById("name").value;
+    let phone=document.getElementById("phone").value;
+    let course=document.getElementById("course").value;
+    let url="https://wa.me/919686654172?text="
+        +"Admission Request:%0A"
+        +"Name: "+name+"%0A"
+        +"Phone: "+phone+"%0A"
+        +"Course: "+course;
+    window.open(url,'_blank');
 }
 
-/* Student Verify */
-
+// Student Verify
 function verifyStudent(){
-
-let id=document.getElementById("studentID").value;
-
-if(id=="HEA001"){
-
-document.getElementById("verifyResult").innerHTML="Valid Student";
-
-}else{
-
-document.getElementById("verifyResult").innerHTML="Student Not Found";
-
+    let id=document.getElementById("studentID").value;
+    if(id=="HEA001"){
+        document.getElementById("verifyResult").innerHTML="Valid Student / درست طالب علم";
+    }else{
+        document.getElementById("verifyResult").innerHTML="Student Not Found / طالب علم نہیں ملا";
+    }
 }
 
-}
-
-/* Result */
-
+// Result
 function checkResult(){
-
-let roll=document.getElementById("roll").value;
-
-if(roll=="101"){
-
-document.getElementById("resultOutput").innerHTML="Result: PASS";
-
-}else{
-
-document.getElementById("resultOutput").innerHTML="Result Not Found";
-
+    let roll=document.getElementById("roll").value;
+    if(roll=="101"){
+        document.getElementById("resultOutput").innerHTML="Result: PASS / کامیاب";
+    }else{
+        document.getElementById("resultOutput").innerHTML="Result Not Found / نتیجہ نہیں ملا";
+    }
 }
 
-}
-
+// YouTube dynamic list
+let youtubeIDs=["dQw4w9WgXcQ","kJQP7kiw5Fk"]; // Replace with actual video IDs
+let container=document.getElementById("youtubeVideos");
+youtubeIDs.forEach(id=>{
+    let div=document.createElement("div");
+    div.className="card";
+    div.innerHTML=`<iframe width="100%" height="200" src="https://www.youtube.com/embed/${id}" frameborder="0" allowfullscreen></iframe>`;
+    container.appendChild(div);
+});
 </script>
 
 </body>
