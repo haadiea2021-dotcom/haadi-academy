@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
@@ -13,24 +12,21 @@
 body{
 margin:0;
 font-family:Arial;
-background:#eef4f2;
+background:#f2f6f5;
 }
 
 /* Welcome Screen */
 
 #welcome{
 position:fixed;
-top:0;
-left:0;
 width:100%;
 height:100%;
-background:#0f6b4f;
+background:#0b5d44;
 color:white;
 display:flex;
-flex-direction:column;
 justify-content:center;
 align-items:center;
-font-size:28px;
+flex-direction:column;
 z-index:9999;
 text-align:center;
 }
@@ -46,10 +42,14 @@ color:gold;
 /* Header */
 
 header{
-background:linear-gradient(#0f6b4f,#04281d);
+background:linear-gradient(#0b5d44,#01271c);
 color:white;
 text-align:center;
-padding:70px 20px;
+padding:60px 20px;
+}
+
+header img{
+width:120px;
 }
 
 /* Navigation */
@@ -62,92 +62,70 @@ text-align:center;
 
 nav a{
 color:white;
-margin:15px;
+margin:10px;
 text-decoration:none;
 font-weight:bold;
 }
 
-/* Slider */
-
-.slider{
-width:100%;
-max-width:900px;
-margin:auto;
-overflow:hidden;
-}
-
-.slide{
-width:100%;
-display:none;
-border-radius:10px;
-}
-
-/* Sections */
+/* Section */
 
 section{
 background:white;
-margin:25px;
-padding:35px;
+margin:20px;
+padding:30px;
 border-radius:10px;
 box-shadow:0 0 10px rgba(0,0,0,0.1);
 }
 
 h2{
-color:#0f6b4f;
 text-align:center;
+color:#0b5d44;
 }
 
 .divider{
-width:120px;
+width:100px;
 height:4px;
 background:gold;
-margin:10px auto 30px auto;
+margin:10px auto 25px auto;
 }
 
-/* Courses */
+/* Grid */
 
-.courses{
+.grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:20px;
 }
 
-.course{
+.card{
 background:#e7f3ef;
 padding:20px;
-border-radius:8px;
-text-align:center;
-font-weight:bold;
-}
-
-/* Teachers */
-
-.teachers{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
+border-radius:10px;
 text-align:center;
 }
+
+/* Teacher */
 
 .teacher img{
 width:120px;
 border-radius:50%;
 }
 
-.teacher{
-background:#f2f8f6;
-padding:20px;
+/* Gallery */
+
+.gallery img{
+width:100%;
 border-radius:10px;
 }
 
-/* Prayer Time */
+/* Prayer */
 
 .prayer{
-background:#0f6b4f;
+background:#0b5d44;
 color:white;
 padding:20px;
-text-align:center;
 border-radius:10px;
+text-align:center;
 }
 
 /* Form */
@@ -161,10 +139,10 @@ border-radius:6px;
 }
 
 button{
-background:#0f6b4f;
+background:#0b5d44;
 color:white;
-padding:10px 20px;
 border:none;
+padding:10px 20px;
 border-radius:6px;
 cursor:pointer;
 }
@@ -178,7 +156,7 @@ text-align:center;
 padding:25px;
 }
 
-/* WhatsApp Button */
+/* WhatsApp */
 
 .whatsapp{
 position:fixed;
@@ -208,35 +186,39 @@ font-weight:bold;
 
 <header>
 
+<img src="logo.png">
+
 <h1>HAADI EDUCATIONAL ACADEMY</h1>
-<p>Islamic & Moral Education For Students</p>
+
+<p>Islamic Education • Quran • Hifz • Arabic</p>
 
 </header>
 
 <nav>
 
-<a href="#gallery">Gallery</a>
+<a href="#about">About</a>
 <a href="#courses">Courses</a>
 <a href="#teachers">Teachers</a>
-<a href="#prayer">Prayer Time</a>
+<a href="#gallery">Gallery</a>
+<a href="#events">Events</a>
+<a href="#prayer">Prayer</a>
+<a href="#verify">Student Verify</a>
 <a href="#admission">Admission</a>
 <a href="#contact">Contact</a>
 
 </nav>
 
-<section id="gallery">
+<section id="about">
 
-<h2>Academy Gallery</h2>
+<h2>About Academy</h2>
 
 <div class="divider"></div>
 
-<div class="slider">
+<p style="text-align:center">
 
-<img class="slide" src="logo.png">
-<img class="slide" src="title.png">
-<img class="slide" src="hea-logo.png">
+Haadi Educational Academy provides Islamic and moral education for students including Quran recitation, Hifz Quran, Arabic language and Islamic studies.
 
-</div>
+</p>
 
 </section>
 
@@ -246,14 +228,14 @@ font-weight:bold;
 
 <div class="divider"></div>
 
-<div class="courses">
+<div class="grid">
 
-<div class="course">Nazira Quran</div>
-<div class="course">Hifz Quran</div>
-<div class="course">Diniyat</div>
-<div class="course">Arabic Language</div>
-<div class="course">3 Year Alim Course</div>
-<div class="course">Tafseer & Hadith</div>
+<div class="card">Nazira Quran</div>
+<div class="card">Hifz Quran</div>
+<div class="card">Diniyat</div>
+<div class="card">Arabic Language</div>
+<div class="card">3 Year Alim Course</div>
+<div class="card">Tafseer & Hadith</div>
 
 </div>
 
@@ -265,21 +247,62 @@ font-weight:bold;
 
 <div class="divider"></div>
 
-<div class="teachers">
+<div class="grid">
 
-<div class="teacher">
+<div class="card teacher">
+
 <img src="teacher1.jpg">
+
 <h3>Molana Mohammed Ansar Shahi</h3>
+
 <p>Principal</p>
+
 </div>
 
-<div class="teacher">
+<div class="card teacher">
+
 <img src="teacher2.jpg">
+
 <h3>Islamic Teacher</h3>
+
 <p>Quran & Hadith</p>
+
 </div>
 
 </div>
+
+</section>
+
+<section id="gallery">
+
+<h2>Gallery</h2>
+
+<div class="divider"></div>
+
+<div class="grid gallery">
+
+<img src="g1.jpg">
+<img src="g2.jpg">
+<img src="g3.jpg">
+
+</div>
+
+</section>
+
+<section id="events">
+
+<h2>Events & Programs</h2>
+
+<div class="divider"></div>
+
+<p style="text-align:center">
+
+Annual Islamic Conference  
+Ramadan Special Classes  
+Quran Competition  
+Summer Islamic Camp
+
+</p>
 
 </section>
 
@@ -289,25 +312,41 @@ font-weight:bold;
 
 <div class="divider"></div>
 
-<div class="prayer" id="prayertimes">
+<div class="prayer" id="prayerTimes">
+
 Loading Prayer Times...
+
 </div>
+
+</section>
+
+<section id="verify">
+
+<h2>Student Certificate Verification</h2>
+
+<div class="divider"></div>
+
+<input id="studentID" placeholder="Enter Student ID">
+
+<button onclick="verifyStudent()">Verify</button>
+
+<p id="result"></p>
 
 </section>
 
 <section id="admission">
 
-<h2>Admission Form</h2>
+<h2>Online Admission Form</h2>
 
 <div class="divider"></div>
 
-<input id="name" type="text" placeholder="Name">
+<input id="name" placeholder="Student Name">
 
-<input id="phone" type="text" placeholder="Phone Number">
+<input id="phone" placeholder="Phone Number">
 
-<textarea id="message" placeholder="Details"></textarea>
+<textarea id="course" placeholder="Course Name"></textarea>
 
-<button onclick="sendWhatsApp()">Send on WhatsApp</button>
+<button onclick="sendWhatsApp()">Submit Admission</button>
 
 </section>
 
@@ -317,11 +356,15 @@ Loading Prayer Times...
 
 <div class="divider"></div>
 
-<p>📍 Khushal Nagar K G Halli Bangalore</p>
+<p>📍 Khushal Nagar KG Halli Bangalore</p>
 
 <p>📞 9686654172 / 9108226606</p>
 
 <p>Principal: Molana Mohammed Ansar Shahi</p>
+
+<iframe width="100%" height="250"
+src="https://maps.google.com/maps?q=kg%20halli%20bangalore&t=&z=13&ie=UTF8&iwloc=&output=embed">
+</iframe>
 
 </section>
 
@@ -339,59 +382,31 @@ WhatsApp
 
 <script>
 
-/* Welcome Screen */
+/* Welcome */
 
 setTimeout(function(){
 document.getElementById("welcome").style.display="none";
 },3000);
 
-/* Slider */
-
-let index=0;
-
-function showSlides(){
-
-let slides=document.getElementsByClassName("slide");
-
-for(let i=0;i<slides.length;i++){
-slides[i].style.display="none";
-}
-
-index++;
-
-if(index>slides.length){
-index=1;
-}
-
-slides[index-1].style.display="block";
-
-setTimeout(showSlides,3000);
-
-}
-
-showSlides();
-
-/* WhatsApp Form */
+/* WhatsApp */
 
 function sendWhatsApp(){
 
 let name=document.getElementById("name").value;
-
 let phone=document.getElementById("phone").value;
-
-let message=document.getElementById("message").value;
+let course=document.getElementById("course").value;
 
 let url="https://wa.me/919686654172?text="
 +"Admission Request:%0A"
 +"Name: "+name+"%0A"
 +"Phone: "+phone+"%0A"
-+"Details: "+message;
++"Course: "+course;
 
 window.open(url,'_blank');
 
 }
 
-/* Prayer Times API */
+/* Prayer Times */
 
 fetch("https://api.aladhan.com/v1/timingsByCity?city=Bangalore&country=India&method=2")
 .then(response=>response.json())
@@ -399,7 +414,7 @@ fetch("https://api.aladhan.com/v1/timingsByCity?city=Bangalore&country=India&met
 
 let t=data.data.timings;
 
-document.getElementById("prayertimes").innerHTML=
+document.getElementById("prayerTimes").innerHTML=
 "Fajr: "+t.Fajr+" | "+
 "Dhuhr: "+t.Dhuhr+" | "+
 "Asr: "+t.Asr+" | "+
@@ -407,6 +422,26 @@ document.getElementById("prayertimes").innerHTML=
 "Isha: "+t.Isha;
 
 });
+
+/* Student Verify */
+
+function verifyStudent(){
+
+let id=document.getElementById("studentID").value;
+
+if(id=="HEA001"){
+
+document.getElementById("result").innerHTML="Valid Student - Haadi Educational Academy";
+
+}
+
+else{
+
+document.getElementById("result").innerHTML="Student Not Found";
+
+}
+
+}
 
 </script>
 
