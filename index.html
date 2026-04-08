@@ -22,11 +22,12 @@ header{
 background:linear-gradient(#0f6b4f,#04281d);
 color:white;
 text-align:center;
-padding:60px 20px;
+padding:70px 20px;
 }
 
-header img{
-width:150px;
+header h1{
+font-size:38px;
+margin:10px 0;
 }
 
 /* Navigation */
@@ -48,12 +49,12 @@ font-weight:bold;
 
 .hero{
 background:url('logo.png') center/cover no-repeat;
-height:340px;
+height:350px;
 display:flex;
 align-items:center;
 justify-content:center;
 color:white;
-font-size:32px;
+font-size:34px;
 text-shadow:2px 2px 8px black;
 }
 
@@ -72,6 +73,13 @@ color:#0f6b4f;
 text-align:center;
 }
 
+.divider{
+width:120px;
+height:4px;
+background:gold;
+margin:10px auto 30px auto;
+}
+
 /* Courses */
 
 .courses{
@@ -86,6 +94,26 @@ padding:20px;
 border-radius:8px;
 text-align:center;
 font-weight:bold;
+}
+
+/* Teachers */
+
+.teachers{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+text-align:center;
+}
+
+.teacher img{
+width:120px;
+border-radius:50%;
+}
+
+.teacher{
+background:#f2f8f6;
+padding:20px;
+border-radius:10px;
 }
 
 /* Gallery */
@@ -129,7 +157,7 @@ text-align:center;
 padding:25px;
 }
 
-/* WhatsApp Button */
+/* WhatsApp */
 
 .whatsapp{
 position:fixed;
@@ -141,25 +169,6 @@ padding:12px 18px;
 border-radius:30px;
 text-decoration:none;
 font-weight:bold;
-}
-
-/* Side Badge */
-
-.side-badge{
-position:fixed;
-left:10px;
-top:50%;
-transform:translateY(-50%);
-width:110px;
-}
-
-/* Islamic Divider */
-
-.divider{
-width:120px;
-height:4px;
-background:gold;
-margin:10px auto 30px auto;
 }
 
 </style>
@@ -190,10 +199,7 @@ window.open(url,'_blank');
 
 <header>
 
-<img src="hea-logo.png">
-
 <h1>HAADI EDUCATIONAL ACADEMY</h1>
-
 <p>Islamic & Moral Education For Students</p>
 
 </header>
@@ -202,6 +208,7 @@ window.open(url,'_blank');
 
 <a href="#about">About</a>
 <a href="#courses">Courses</a>
+<a href="#teachers">Teachers</a>
 <a href="#gallery">Gallery</a>
 <a href="#admission">Admission</a>
 <a href="#contact">Contact</a>
@@ -217,12 +224,11 @@ Welcome To Haadi Educational Academy
 <section id="about">
 
 <h2>About Our Academy</h2>
-
 <div class="divider"></div>
 
 <p>
 
-Haadi Educational Academy provides Islamic education, Quran learning and moral training for students.
+Haadi Educational Academy provides Quran education, Islamic studies and moral training for students.
 
 </p>
 
@@ -231,7 +237,6 @@ Haadi Educational Academy provides Islamic education, Quran learning and moral t
 <section id="courses">
 
 <h2>Our Courses</h2>
-
 <div class="divider"></div>
 
 <div class="courses">
@@ -247,10 +252,40 @@ Haadi Educational Academy provides Islamic education, Quran learning and moral t
 
 </section>
 
+<section id="teachers">
+
+<h2>Our Teachers</h2>
+<div class="divider"></div>
+
+<div class="teachers">
+
+<div class="teacher">
+
+<img src="teacher1.jpg">
+
+<h3>Molana Mohammed Ansar Shahi</h3>
+
+<p>Principal</p>
+
+</div>
+
+<div class="teacher">
+
+<img src="teacher2.jpg">
+
+<h3>Islamic Teacher</h3>
+
+<p>Quran & Hadith</p>
+
+</div>
+
+</div>
+
+</section>
+
 <section id="gallery">
 
-<h2>Academy Gallery</h2>
-
+<h2>Students Gallery</h2>
 <div class="divider"></div>
 
 <div class="gallery">
@@ -263,10 +298,22 @@ Haadi Educational Academy provides Islamic education, Quran learning and moral t
 
 </section>
 
+<section style="text-align:center">
+
+<h2>Download Prospectus</h2>
+<div class="divider"></div>
+
+<a href="prospectus.pdf">
+
+<button>Download Prospectus</button>
+
+</a>
+
+</section>
+
 <section id="admission">
 
 <h2>Admission Form</h2>
-
 <div class="divider"></div>
 
 <input id="name" type="text" placeholder="Name">
@@ -282,7 +329,6 @@ Haadi Educational Academy provides Islamic education, Quran learning and moral t
 <section id="contact">
 
 <h2>Contact Us</h2>
-
 <div class="divider"></div>
 
 <p>📍 Khushal Nagar K G Halli Bangalore</p>
@@ -304,8 +350,6 @@ Haadi Educational Academy provides Islamic education, Quran learning and moral t
 WhatsApp
 
 </a>
-
-<img src="badge.png" class="side-badge">
 
 </body>
 </html>
