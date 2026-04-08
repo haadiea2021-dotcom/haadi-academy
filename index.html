@@ -5,7 +5,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Haadi Educational Academy</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+
+<!-- Google Font for Urdu -->
+<link href="https://fonts.googleapis.com/css2?family=Jameel+Noori+Nastaleeq&display=swap" rel="stylesheet">
+
 <style>
 body{
     margin:0;
@@ -13,10 +16,11 @@ body{
     background:#f2f6f5;
 }
 .urdu{
-    font-family:'Noto Nastaliq Urdu', serif;
+    font-family:'Jameel Noori Nastaleeq', serif;
     direction:rtl;
     line-height:2;
     font-size:20px;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 }
 .bilingual{
     display:flex;
@@ -103,6 +107,32 @@ footer{
     border-radius:30px;
     text-decoration:none;
 }
+
+/* YouTube Cards Styling */
+#youtubeVideos .card{
+    background:#f9f9f9;
+    border-radius:12px;
+    padding:10px;
+    text-align:center;
+    box-shadow:0 3px 8px rgba(0,0,0,0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+#youtubeVideos .card:hover{
+    transform: scale(1.03);
+    box-shadow:0 6px 15px rgba(0,0,0,0.25);
+}
+#youtubeVideos iframe{
+    border-radius:10px;
+    width:100%;
+    height:220px;
+}
+#youtubeVideos p{
+    font-size:16px;
+    font-weight:bold;
+    margin-top:8px;
+    color:#0b5d44;
+}
+
 @media(max-width:600px){
     header h1{font-size:24px;}
     .urdu{font-size:18px;}
@@ -137,7 +167,7 @@ footer{
 <section id="about">
 <h2>About Academy / اکیڈمی کے بارے میں</h2>
 <div class="bilingual">
-<p class="urdu">ہادی ایجوکیشنل اکیڈمی میں قرآن مجید، حفظ قرآن، دینیات، اور عربی زبان کی تعلیم دی جاتی ہے۔</p>
+<p class="urdu">ہادی ایجوکیشنل اکیڈمی میں قرآن مجید کی تعلیم، حفظ قرآن، دینی علوم، اور عربی زبان سکھائی جاتی ہے۔</p>
 <p>Haadi Educational Academy provides Quranic education, Hifz, Islamic studies, and Arabic language courses.</p>
 </div>
 </section>
@@ -145,11 +175,11 @@ footer{
 <section id="courses">
 <h2>Courses / کورسز</h2>
 <div class="grid">
-<div class="card"><p class="urdu">ناظیرہ قرآن</p><p>Nazira Quran</p></div>
+<div class="card"><p class="urdu">ناظرہ قرآن</p><p>Nazira Quran</p></div>
 <div class="card"><p class="urdu">حفظ قرآن</p><p>Hifz Quran</p></div>
 <div class="card"><p class="urdu">دینیات</p><p>Diniyat</p></div>
 <div class="card"><p class="urdu">عربی زبان</p><p>Arabic Language</p></div>
-<div class="card"><p class="urdu">3 سالہ علم دین کورس</p><p>3 Year Alim Course</p></div>
+<div class="card"><p class="urdu">تین سالہ علم دین کورس</p><p>3 Year Alim Course</p></div>
 </div>
 </section>
 
@@ -158,7 +188,7 @@ footer{
 <div class="grid">
 <div class="card">
 <h3>Molana Mohammed Ansar Shahi</h3>
-<p class="urdu">پرنسپل</p>
+<p class="urdu">پرنسپل (سربراہ)</p>
 <p>Principal</p>
 </div>
 </div>
@@ -167,15 +197,15 @@ footer{
 <section id="gallery">
 <h2>Gallery / گیلری</h2>
 <div class="grid">
-<div class="card"><p class="urdu">اکیڈمی پروگرام</p><p>Academy Program</p></div>
-<div class="card"><p class="urdu">طلبہ کلاس</p><p>Students Class</p></div>
+<div class="card"><p class="urdu">اکیڈمی کے پروگرام</p><p>Academy Program</p></div>
+<div class="card"><p class="urdu">طلبہ کی کلاسیں</p><p>Students Class</p></div>
 <div class="card"><p class="urdu">قرآن مقابلہ</p><p>Quran Competition</p></div>
 </div>
 </section>
 
 <section id="youtube">
 <h2>YouTube Channel / یوٹیوب چینل</h2>
-<div id="youtubeVideos" class="grid"></div>
+<div id="youtubeVideos" class="grid">Loading videos...</div>
 <br>
 <a href="https://youtube.com/@haadieducationalacadamy" target="_blank"
 style="background:red;color:white;padding:10px 20px;border-radius:6px;text-decoration:none;">
@@ -186,8 +216,8 @@ Subscribe Channel
 <section id="notice">
 <h2>Notice Board / نوٹس بورڈ</h2>
 <div class="notice">
-<p class="urdu">داخلے شروع 2026<br>اسلامی سمر کیمپ<br>قرآن مقابلہ</p>
-<p>Admissions Open 2026<br>Islamic Summer Camp<br>Quran Competition</p>
+<p class="urdu">داخلے شروع 2026، اسلامی سمر کیمپ، قرآن مقابلہ</p>
+<p>Admissions Open 2026, Islamic Summer Camp, Quran Competition</p>
 </div>
 </section>
 
@@ -204,7 +234,7 @@ Subscribe Channel
 </section>
 
 <section id="result">
-<h2>Student Result / طالب علم کا نتیجہ</h2>
+<h2>Student Result / طالب علم کے نتائج</h2>
 <input id="roll" placeholder="Roll Number">
 <button onclick="checkResult()">Check Result</button>
 <p id="resultOutput"></p>
@@ -221,7 +251,8 @@ Subscribe Channel
 <section id="contact">
 <h2>Contact / رابطہ</h2>
 <p>📍 KG Halli Bangalore</p>
-<p>📞 9686654172</p>
+<p>📞 عمومی رابطہ: 9686654172</p>
+<p>📞 مستورات کے لیے رابطہ: 7204846606</p>
 <iframe width="100%" height="250"
 src="https://maps.google.com/maps?q=kg%20halli%20bangalore&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
 </section>
@@ -233,7 +264,7 @@ src="https://maps.google.com/maps?q=kg%20halli%20bangalore&t=&z=13&ie=UTF8&iwloc
 <a class="whatsapp" href="https://wa.me/919686654172" target="_blank">WhatsApp</a>
 
 <script>
-// 12-hour format
+// Format 24h to 12h
 function formatTime24to12(time24){
     let [hour,min]=time24.split(":").map(Number);
     let suffix = hour>=12?"PM":"AM";
@@ -241,9 +272,9 @@ function formatTime24to12(time24){
     return hour+":"+min.toString().padStart(2,'0')+" "+suffix;
 }
 
-// Prayer times
-fetch("https://api.aladhan.com/v1/timingsByCity?city=Bangalore&country=India&method=2")
-.then(res=>res.json())
+// Prayer times with Hanafi Asr
+fetch("https://api.aladhan.com/v1/timingsByCity?city=Bangalore&country=India&method=2&school=0")
+.then(response=>response.json())
 .then(data=>{
     let t=data.data.timings;
     document.getElementById("prayerTimes").innerHTML=
@@ -254,16 +285,29 @@ fetch("https://api.aladhan.com/v1/timingsByCity?city=Bangalore&country=India&met
         "Isha: "+formatTime24to12(t.Isha);
 });
 
-// WhatsApp Form
+// WhatsApp Form with Validation
 function sendWhatsApp(){
-    let name=document.getElementById("name").value;
-    let phone=document.getElementById("phone").value;
-    let course=document.getElementById("course").value;
+    let name=document.getElementById("name").value.trim();
+    let phone=document.getElementById("phone").value.trim();
+    let course=document.getElementById("course").value.trim();
+
+    if(name==="" || phone==="" || course===""){
+        alert("تمام فیلڈز پر کریں۔ / Please fill all fields.");
+        return;
+    }
+
+    let phonePattern = /^[0-9]{10}$/;
+    if(!phonePattern.test(phone)){
+        alert("براہ کرم درست فون نمبر درج کریں / Enter valid 10-digit phone number.");
+        return;
+    }
+
     let url="https://wa.me/919686654172?text="
         +"Admission Request:%0A"
         +"Name: "+name+"%0A"
         +"Phone: "+phone+"%0A"
         +"Course: "+course;
+
     window.open(url,'_blank');
 }
 
@@ -287,14 +331,40 @@ function checkResult(){
     }
 }
 
-// YouTube dynamic list
-let youtubeIDs=["dQw4w9WgXcQ","kJQP7kiw5Fk"]; // Replace with actual video IDs
-let container=document.getElementById("youtubeVideos");
-youtubeIDs.forEach(id=>{
-    let div=document.createElement("div");
-    div.className="card";
-    div.innerHTML=`<iframe width="100%" height="200" src="https://www.youtube.com/embed/${id}" frameborder="0" allowfullscreen></iframe>`;
-    container.appendChild(div);
+// YouTube Auto Fetch Islamic Videos Only
+const apiKey = "YOUR_API_KEY_HERE"; // Google API Key
+const channelID = "UCM34o9uMDK1C4A1a6zlYbYg"; // Haadi channel ID
+const islamicKeywords = ["quran","tilawat","islamic","hadees","dars","seerat","tajweed","dua"];
+
+fetch(`https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelID}&part=snippet,id&order=date&maxResults=20`)
+.then(res => res.json())
+.then(data=>{
+    let container = document.getElementById("youtubeVideos");
+    container.innerHTML = "";
+    data.items.forEach(item=>{
+        if(item.id.kind==="youtube#video"){
+            let title = item.snippet.title.toLowerCase();
+            let description = item.snippet.description.toLowerCase();
+            let isIslamic = islamicKeywords.some(keyword => title.includes(keyword) || description.includes(keyword));
+            if(isIslamic){
+                let videoID = item.id.videoId;
+                let div = document.createElement("div");
+                div.className = "card";
+                div.innerHTML = `
+                    <iframe src="https://www.youtube.com/embed/${videoID}" frameborder="0" allowfullscreen></iframe>
+                    <p>${item.snippet.title}</p>
+                `;
+                container.appendChild(div);
+            }
+        }
+    });
+    if(container.innerHTML===""){
+        container.innerHTML="<p>No Islamic videos available</p>";
+    }
+})
+.catch(err=>{
+    console.error("YouTube API error:", err);
+    document.getElementById("youtubeVideos").innerHTML = "<p>Unable to load videos</p>";
 });
 </script>
 
