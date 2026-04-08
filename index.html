@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -12,31 +13,26 @@
 body{
 margin:0;
 font-family:Arial;
-background:#f2f7f5;
+background:#f4f4f4;
 }
 
 /* Header */
 
 header{
-background:linear-gradient(#0f6b4f,#083d2c);
+background:#0f6b4f;
 color:white;
 text-align:center;
-padding:50px 20px;
+padding:40px;
 }
 
 header img{
 width:150px;
 }
 
-header h1{
-margin-top:10px;
-font-size:36px;
-}
-
 /* Navigation */
 
 nav{
-background:#063728;
+background:#083d2c;
 padding:12px;
 text-align:center;
 }
@@ -48,32 +44,17 @@ text-decoration:none;
 font-weight:bold;
 }
 
-/* Hero Section */
-
-.hero{
-background:url('logo.png') center/cover no-repeat;
-height:300px;
-display:flex;
-align-items:center;
-justify-content:center;
-color:white;
-font-size:28px;
-text-shadow:2px 2px 5px black;
-}
-
 /* Sections */
 
 section{
-padding:40px;
-margin:20px;
 background:white;
+margin:20px;
+padding:30px;
 border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
 }
 
 h2{
 color:#0f6b4f;
-text-align:center;
 }
 
 /* Courses */
@@ -89,7 +70,6 @@ background:#e6f3ef;
 padding:20px;
 text-align:center;
 border-radius:8px;
-font-weight:bold;
 }
 
 /* Gallery */
@@ -107,7 +87,7 @@ border-radius:8px;
 
 /* Form */
 
-form input, textarea{
+input, textarea{
 width:100%;
 padding:10px;
 margin:8px 0;
@@ -173,23 +153,39 @@ width:110px;
 
 <nav>
 
-<a href="#">Home</a>
-
+<a href="#home">Home</a>
+<a href="#about">About</a>
 <a href="#courses">Courses</a>
-
-<a href="#gallery">Gallery</a>
-
 <a href="#admission">Admission</a>
-
 <a href="#contact">Contact</a>
 
 </nav>
 
-<div class="hero">
+<section id="home">
 
-Islamic Education For Modern Youth
+<h2>Welcome</h2>
 
-</div>
+<p>
+
+Haadi Educational Academy provides Islamic and moral education for school and college students.  
+Our aim is to spread knowledge of Quran, Hadith and Islamic teachings.
+
+</p>
+
+</section>
+
+<section id="about">
+
+<h2>About Academy</h2>
+
+<p>
+
+Haadi Educational Academy is dedicated to providing Islamic education and moral training for youth.  
+Students learn Quran, Hadith, Arabic language and Islamic teachings.
+
+</p>
+
+</section>
 
 <section id="courses">
 
@@ -203,9 +199,9 @@ Islamic Education For Modern Youth
 
 <div class="course">Diniyat</div>
 
-<div class="course">3 Year Alim Course</div>
-
 <div class="course">Arabic Language</div>
+
+<div class="course">3 Year Alim Course</div>
 
 <div class="course">Tafseer & Hadith</div>
 
@@ -220,9 +216,7 @@ Islamic Education For Modern Youth
 <div class="gallery">
 
 <img src="logo.png">
-
 <img src="title.png">
-
 <img src="hea-logo.png">
 
 </div>
@@ -235,15 +229,15 @@ Islamic Education For Modern Youth
 
 <form>
 
-<input type="text" placeholder="Name" required>
+<input type="text" placeholder="Name">
 
-<input type="text" placeholder="Phone Number" required>
+<input type="text" placeholder="Phone Number">
 
 <input type="email" placeholder="Email">
 
 <textarea placeholder="Details"></textarea>
 
-<button type="submit">Submit</button>
+<button>Submit</button>
 
 </form>
 
@@ -267,7 +261,7 @@ Islamic Education For Modern Youth
 
 </footer>
 
-<a class="whatsapp" href="https://wa.me/919686654172" target="_blank">
+<a class="whatsapp" href="https://wa.me/919686654172">
 
 WhatsApp
 
