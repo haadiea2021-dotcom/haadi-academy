@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
@@ -12,111 +11,31 @@
 
 <style>
 
-body{
-margin:0;
-font-family:Arial;
-background:#f4f7f6;
-}
+body{margin:0;font-family:Arial;background:#f4f7f6;}
 
-.urdu{
-font-family:'Noto Nastaliq Urdu', serif;
-direction:rtl;
-line-height:2;
-font-size:20px;
-}
+.urdu{font-family:'Noto Nastaliq Urdu';direction:rtl;display:none;font-size:20px;}
 
-header{
-background:linear-gradient(#0b5d44,#01271c);
-color:white;
-text-align:center;
-padding:40px;
-}
+header{background:linear-gradient(#0b5d44,#01271c);color:white;text-align:center;padding:30px;}
 
-nav{
-background:#021a13;
-text-align:center;
-padding:12px;
-}
+nav{background:#021a13;text-align:center;padding:10px;}
 
-nav a{
-color:white;
-margin:10px;
-text-decoration:none;
-font-weight:bold;
-}
+nav a{color:white;margin:8px;text-decoration:none;font-weight:bold;}
 
-section{
-background:white;
-margin:15px;
-padding:25px;
-border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
-}
+section{background:white;margin:15px;padding:20px;border-radius:10px;}
 
-h2{
-text-align:center;
-color:#0b5d44;
-}
+h2{text-align:center;color:#0b5d44;}
 
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:15px;
-}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px;}
 
-.card{
-background:#e7f3ef;
-padding:20px;
-border-radius:10px;
-text-align:center;
-}
+.card{background:#e7f3ef;padding:15px;border-radius:10px;text-align:center;}
 
-.icon{
-font-size:35px;
-}
+.slider img{width:100%;height:250px;object-fit:cover;border-radius:10px;}
 
-.notice{
-background:#fff3cd;
-padding:15px;
-border-radius:8px;
-text-align:center;
-}
+.toggle{position:fixed;top:10px;right:10px;background:#0b5d44;color:white;padding:8px;border-radius:6px;cursor:pointer;}
 
-input,textarea{
-width:100%;
-padding:10px;
-margin:8px 0;
-border:1px solid #ccc;
-border-radius:6px;
-}
+.whatsapp{position:fixed;bottom:15px;right:15px;background:#25D366;color:white;padding:12px;border-radius:30px;text-decoration:none;}
 
-button{
-background:#0b5d44;
-color:white;
-border:none;
-padding:10px;
-border-radius:6px;
-cursor:pointer;
-width:100%;
-}
-
-footer{
-background:#111;
-color:white;
-text-align:center;
-padding:20px;
-}
-
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:12px 18px;
-border-radius:30px;
-text-decoration:none;
-}
+footer{background:#111;color:white;text-align:center;padding:15px;}
 
 </style>
 
@@ -124,148 +43,105 @@ text-decoration:none;
 
 <body>
 
+<div class="toggle" onclick="toggleLang()">اردو / ENG</div>
+
 <header>
 
-<img src="images/Logo.png" width="120">
+<img src="images/Logo.png" width="100">
 
 <h1>Haadi Educational Academy</h1>
+<h2 class="urdu">ھادی ایجوکیشنل اکیڈمی</h2>
 
-<p class="urdu">ھادی ایجوکیشنل اکیڈمی</p>
-
-<p>Established 2021 | قائم شدہ ۲۰۲۱</p>
-
-<p class="urdu">
-اسکول کالج میں زیرتعلیم طلبہ اور طالبات کے لئے آن لائن دینی تعلیم کا بہترین انتظام
-</p>
+<p>Established 2021</p>
+<p class="urdu">قائم شدہ ۲۰۲۱</p>
 
 </header>
 
 <nav>
 
-<a href="#home">Home / ہوم</a>
-<a href="#about">About / تعارف</a>
-<a href="#courses">Courses / کورسز</a>
-<a href="#departments">Departments / شعبہ جات</a>
-<a href="#admission">Admission / داخلہ</a>
-<a href="#contact">Contact / رابطہ</a>
+<a href="#home">Home</a>
+<a href="#courses">Courses</a>
+<a href="#youtube">YouTube</a>
+<a href="#contact">Contact</a>
 
 </nav>
 
-<section id="home">
-
-<h2>Welcome / خوش آمدید</h2>
-
-<p class="urdu">
-یہ ایک دینی و عصری تعلیمی ادارہ ہے جہاں طلبہ وطالبات کو قرآن و سنت کی تعلیم دی جاتی ہے۔
-</p>
-
-<p>
-We provide Islamic education for school and college students (boys & girls).
-</p>
-
+<section class="slider">
+<img id="slide" src="images/haadi-gallery1.jpg">
 </section>
 
-<section id="about">
+<section id="home">
 
-<h2>About Us / تعارف</h2>
+<h2>Welcome</h2>
+<h2 class="urdu">خوش آمدید</h2>
 
-<p class="urdu">
-ھادی ایجوکیشنل اکیڈمی خوشحال نگر کے جی ہلی بنگلور میں واقع ایک دینی ادارہ ہے جو 2021 میں قائم ہوا۔
-</p>
-
-<p class="urdu">
-اس ادارے کا مقصد طلبہ وطالبات کو علم دین سے آراستہ کرنا ہے۔
-</p>
-
-<p class="urdu"><b>سرپرست:</b> حضرت مولانا مفتی محمد اسلم صاحب رشادی وقاسمی</p>
-
-<p class="urdu"><b>بانی و سکریٹری:</b> حضرت مولانا محمد انصر صاحب شاہی</p>
+<p>Islamic education for boys & girls</p>
+<p class="urdu">طلبہ و طالبات کے لئے دینی تعلیم</p>
 
 </section>
 
 <section id="courses">
 
-<h2>Courses / کورسز</h2>
+<h2>Courses</h2>
+<h2 class="urdu">کورسز</h2>
 
 <div class="grid">
 
-<div class="card">
-<div class="icon">📖</div>
-Nazira Quran
-<p class="urdu">ناظرہ قرآن مجید</p>
-</div>
-
-<div class="card">
-<div class="icon">📚</div>
-Hifz Quran
-<p class="urdu">حفظ قرآن کورس</p>
-</div>
-
-<div class="card">
-<div class="icon">🕌</div>
-Diniyat
-<p class="urdu">دینیات</p>
-</div>
-
-<div class="card">
-<div class="icon">🎓</div>
-Alim Course
-<p class="urdu">3 سالہ علم دین کورس</p>
-</div>
+<div class="card">📖 Nazira<br><span class="urdu">ناظرہ قرآن</span></div>
+<div class="card">📚 Hifz<br><span class="urdu">حفظ قرآن</span></div>
+<div class="card">🕌 Diniyat<br><span class="urdu">دینیات</span></div>
+<div class="card">🎓 Alim<br><span class="urdu">علم دین کورس</span></div>
 
 </div>
 
 </section>
 
-<section id="departments">
+<section id="youtube">
 
-<h2>Departments / شعبہ جات</h2>
+<h2>YouTube Channels</h2>
 
-<div class="grid">
+<iframe width="100%" height="250"
+src="https://www.youtube.com/embed?listType=user_uploads&list=haadieducationalacadamy">
+</iframe>
 
-<div class="card">Online Classes<br><span class="urdu">آن لائن کلاسز</span></div>
+<br><br>
 
-<div class="card">Offline Classes<br><span class="urdu">آفلائن کلاسز</span></div>
+<iframe width="100%" height="250"
+src="https://www.youtube.com/embed?listType=user_uploads&list=maulanaansarshahiofficial">
+</iframe>
 
-<div class="card">Separate for Boys & Girls<br><span class="urdu">بچوں اور بچیوں کے لیے علیحدہ انتظام</span></div>
+<br><br>
 
-</div>
-
-<h3 style="text-align:center;">Timings / اوقات</h3>
-
-<p style="text-align:center;">
-Morning: 06:30 - 08:00<br>
-Evening: 05:00 - 06:30<br>
-Evening: 06:30 - 08:00
-</p>
+<a href="https://youtube.com/@haadieducationalacadamy" target="_blank">Academy Channel</a><br>
+<a href="https://youtube.com/@maulanaansarshahiofficial" target="_blank">Ansar Shahi Official</a>
 
 </section>
 
-<section id="admission">
+<section>
 
-<h2>Admission Form / داخلہ فارم</h2>
-
-<input placeholder="Name / نام">
-
-<input placeholder="Phone / فون">
-
-<textarea placeholder="Course / کورس"></textarea>
-
-<button>Submit / جمع کریں</button>
+<h2>Prayer Times</h2>
+<div id="prayer"></div>
 
 </section>
 
 <section id="contact">
 
-<h2>Contact / رابطہ</h2>
-
-<p class="urdu">📍 خوشحال نگر کے جی ہلی بنگلور</p>
+<h2>Contact</h2>
 
 <p>📞 9686654172 / 9108226606</p>
+<p>📞 Ladies: 7204846606</p>
 
-<p class="urdu">پرنسپل: مولانا محمد انصر صاحب شاہی</p>
+<p class="urdu">ناظم: مولانا محمد انصر شاہی</p>
 
-<p class="urdu">آرگنائزر: ھادی ایجوکیشنل اکیڈمی ٹرسٹ بنگلور</p>
+<iframe width="100%" height="250"
+src="https://maps.google.com/maps?q=kg%20halli%20bangalore&output=embed">
+</iframe>
+
+<br><br>
+
+<a href="https://maps.app.goo.gl/Do1cnqtBKjFZ4svAA" target="_blank">
+Open Location
+</a>
 
 </section>
 
@@ -276,6 +152,39 @@ Evening: 06:30 - 08:00
 </footer>
 
 <a class="whatsapp" href="https://wa.me/919686654172">WhatsApp</a>
+
+<script>
+
+/* LANGUAGE */
+
+function toggleLang(){
+document.querySelectorAll(".urdu").forEach(e=>{
+e.style.display=(e.style.display=="block")?"none":"block";
+});
+}
+
+/* SLIDER */
+
+let imgs=["images/haadi-gallery1.jpg","images/haadi-gallery2.jpg"];
+let i=0;
+setInterval(()=>{
+i=(i+1)%imgs.length;
+document.getElementById("slide").src=imgs[i];
+},3000);
+
+/* PRAYER */
+
+fetch("https://api.aladhan.com/v1/timingsByCity?city=Bangalore&country=India&method=2&school=1")
+
+.then(r=>r.json())
+
+.then(d=>{
+let t=d.data.timings;
+document.getElementById("prayer").innerHTML=
+"Fajr "+t.Fajr+"<br>Dhuhr "+t.Dhuhr+"<br>Asr(Hanafi) "+t.Asr+"<br>Maghrib "+t.Maghrib+"<br>Isha "+t.Isha;
+});
+
+</script>
 
 </body>
 </html>
