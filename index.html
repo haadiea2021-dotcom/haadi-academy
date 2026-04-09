@@ -1,189 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
 
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Haadi Educational Academy</title>
-
 <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
-
 <style>
-
-body{margin:0;font-family:Arial;background:#f4f7f6;}
-
-.urdu{font-family:'Noto Nastaliq Urdu';direction:rtl;display:none;font-size:20px;}
-
-header{background:linear-gradient(#0b5d44,#01271c);color:white;text-align:center;padding:30px;}
-
-nav{background:#021a13;text-align:center;padding:10px;}
-
+body{margin:0;font-family:Arial;background:#f2f6f5;}
+.urdu{font-family:'Noto Nastaliq Urdu', serif;direction:rtl;line-height:2;font-size:20px;}
+header{background:linear-gradient(#0b5d44,#01271c);color:white;text-align:center;padding:50px;}
+header img{width:120px;}
+nav{background:#021a13;text-align:center;padding:12px;}
 nav a{color:white;margin:8px;text-decoration:none;font-weight:bold;}
-
-section{background:white;margin:15px;padding:20px;border-radius:10px;}
-
+section{background:white;margin:20px;padding:30px;border-radius:10px;box-shadow:0 0 10px rgba(0,0,0,0.1);}
 h2{text-align:center;color:#0b5d44;}
-
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px;}
-
-.card{background:#e7f3ef;padding:15px;border-radius:10px;text-align:center;}
-
-.slider img{width:100%;height:250px;object-fit:cover;border-radius:10px;}
-
-.toggle{position:fixed;top:10px;right:10px;background:#0b5d44;color:white;padding:8px;border-radius:6px;cursor:pointer;}
-
-.whatsapp{position:fixed;bottom:15px;right:15px;background:#25D366;color:white;padding:12px;border-radius:30px;text-decoration:none;}
-
-footer{background:#111;color:white;text-align:center;padding:15px;}
-
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;}
+.card{background:#e7f3ef;padding:20px;border-radius:10px;text-align:center;}
+input,textarea{width:100%;padding:10px;margin:8px 0;border:1px solid #ccc;border-radius:6px;}
+button{background:#0b5d44;color:white;border:none;padding:10px 20px;border-radius:6px;cursor:pointer;}
+footer{background:#111;color:white;text-align:center;padding:20px;}
+.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:12px 18px;border-radius:30px;text-decoration:none;}
+iframe{border:none;border-radius:10px;}
 </style>
-
 </head>
 
 <body>
 
-<div class="toggle" onclick="toggleLang()">اردو / ENG</div>
-
+<!-- HEADER -->
 <header>
-
-<img src="images/Logo.png" width="100">
-
+<img src="images/logo.png" alt="Haadi Logo">
 <h1>Haadi Educational Academy</h1>
+<p>Islamic Education For Students / دینی تعلیم طلبہ وطالبات کے لیے</p>
 <h2 class="urdu">ھادی ایجوکیشنل اکیڈمی</h2>
-
-<p>Established 2021</p>
-<p class="urdu">قائم شدہ ۲۰۲۱</p>
-
 </header>
 
+<!-- NAVIGATION -->
 <nav>
-
-<a href="#home">Home</a>
+<a href="#about">About</a>
 <a href="#courses">Courses</a>
+<a href="#departments">Departments</a>
+<a href="#prayer">Prayer</a>
+<a href="#teachers">Teachers</a>
 <a href="#youtube">YouTube</a>
+<a href="#admin">Admin</a>
+<a href="#admission">Admission</a>
 <a href="#contact">Contact</a>
-
 </nav>
 
-<section class="slider">
-<img id="slide" src="images/haadi-gallery1.jpg">
+<!-- ABOUT -->
+<section id="about">
+<h2>تعارف | About Us</h2>
+<p class="urdu">ھادی ایجوکیشنل اکیڈمی، خوشحال نگر کے جی ہلی بنگلور میں واقع ایک دینی ادارہ ہے جو 2021 میں قائم ہوا۔ اس ادارے کا مقصد طلبہ وطالبات کو علم دین سے آراستہ کرنا ہے۔</p>
+<p>We provide Islamic education for school and college students (boys & girls).</p>
+<p class="urdu"><b>سرپرست:</b> حضرت مولانا مفتی محمد اسلم صاحب رشادی وقاسمی</p>
+<p class="urdu"><b>بانی و سکریٹری:</b> حضرت مولانا محمد انصر صاحب شاہی</p>
 </section>
 
-<section id="home">
-
-<h2>Welcome</h2>
-<h2 class="urdu">خوش آمدید</h2>
-
-<p>Islamic education for boys & girls</p>
-<p class="urdu">طلبہ و طالبات کے لئے دینی تعلیم</p>
-
-</section>
-
+<!-- COURSES -->
 <section id="courses">
-
-<h2>Courses</h2>
-<h2 class="urdu">کورسز</h2>
-
+<h2>کورسز | Courses</h2>
 <div class="grid">
-
-<div class="card">📖 Nazira<br><span class="urdu">ناظرہ قرآن</span></div>
-<div class="card">📚 Hifz<br><span class="urdu">حفظ قرآن</span></div>
-<div class="card">🕌 Diniyat<br><span class="urdu">دینیات</span></div>
-<div class="card">🎓 Alim<br><span class="urdu">علم دین کورس</span></div>
-
+<div class="card">📖 ناظرہ قرآن / Nazira Quran</div>
+<div class="card">🕋 حفظ قرآن / Hifz Quran</div>
+<div class="card">🕌 دینیات / Diniyat</div>
+<div class="card">📚 3 سالہ علم دین کورس / 3 Year Alim Course</div>
+<div class="card">📝 عربی زبان / Arabic Language</div>
 </div>
-
 </section>
 
+<!-- DEPARTMENTS -->
+<section id="departments">
+<h2>شعبہ جات | Departments</h2>
+<div class="grid">
+<div class="card">آن لائن کلاسز / Online Classes</div>
+<div class="card">آفلائن کلاسز / Offline Classes</div>
+<div class="card">بچوں اور بچیوں کے لیے علیحدہ انتظام / Separate for Boys & Girls</div>
+</div>
+</section>
+
+<!-- PRAYER TIMES -->
+<section id="prayer">
+<h2>نماز کے اوقات | Prayer Times (Bangalore)</h2>
+<div id="prayerTimes" style="text-align:center">Loading Prayer Times...</div>
+</section>
+
+<!-- TEACHERS -->
+<section id="teachers">
+<h2>اساتذہ | Teachers</h2>
+<div class="grid">
+<div class="card">
+<h3>مولانا محمد انصر صاحب شاہی</h3>
+<p class="urdu">ناظم</p>
+<p>Admin / Principal</p>
+</div>
+</div>
+</section>
+
+<!-- YOUTUBE -->
 <section id="youtube">
-
 <h2>YouTube Channels</h2>
+<p><a href="https://youtube.com/@haadieducationalacadamy?si=M6krTEbi7Qvkj6Zf" target="_blank">Haadi Educational Academy</a></p>
+<p><a href="https://youtube.com/@maulanaansarshahiofficial?si=7vyHjiBsNGysp7Ft" target="_blank">Molana Mohammed Ansar Shahi Official</a></p>
+</section>
 
-<iframe width="100%" height="250"
-src="https://www.youtube.com/embed?listType=user_uploads&list=haadieducationalacadamy">
-</iframe>
+<!-- ADMIN LOGIN -->
+<section id="admin">
+<h2>Admin Login</h2>
+<input type="password" id="adminPass" placeholder="Enter Password">
+<button onclick="login()">Login</button>
+<p id="loginMsg"></p>
+</section>
 
-<br><br>
-
-<iframe width="100%" height="250"
-src="https://www.youtube.com/embed?listType=user_uploads&list=maulanaansarshahiofficial">
-</iframe>
-
-<br><br>
-
-<a href="https://youtube.com/@haadieducationalacadamy" target="_blank">Academy Channel</a><br>
-<a href="https://youtube.com/@maulanaansarshahiofficial" target="_blank">Ansar Shahi Official</a>
-
+<!-- ADMIN PANEL -->
+<section id="adminPanel" style="display:none;">
+<h2>Admin Panel</h2>
+<input id="sname" placeholder="Student Name">
+<input id="sroll" placeholder="Roll Number">
+<input id="scourse" placeholder="Course">
+<button onclick="addStudent()">Add Student</button>
 </section>
 
 <section>
-
-<h2>Prayer Times</h2>
-<div id="prayer"></div>
-
+<h2>Check Result</h2>
+<input id="searchRoll" placeholder="Enter Roll Number">
+<button onclick="searchStudent()">Search</button>
+<p id="result"></p>
 </section>
 
+<!-- ADMISSION FORM -->
+<section id="admission">
+<h2>داخلہ فارم | Admission Form</h2>
+<input id="name" placeholder="Name / نام">
+<input id="phone" placeholder="Phone / فون">
+<textarea id="course" placeholder="Course / کورس"></textarea>
+<button onclick="sendWhatsApp()">Submit / جمع کریں</button>
+</section>
+
+<!-- CONTACT -->
 <section id="contact">
-
-<h2>Contact</h2>
-
+<h2>رابطہ کریں | Contact</h2>
+<p>📍 <a href="https://maps.app.goo.gl/Do1cnqtBKjFZ4svAA?g_st=aw" target="_blank">خوشحال نگر کے جی ہلی بنگلور</a></p>
 <p>📞 9686654172 / 9108226606</p>
-<p>📞 Ladies: 7204846606</p>
-
-<p class="urdu">ناظم: مولانا محمد انصر شاہی</p>
-
-<iframe width="100%" height="250"
-src="https://maps.google.com/maps?q=kg%20halli%20bangalore&output=embed">
-</iframe>
-
-<br><br>
-
-<a href="https://maps.app.goo.gl/Do1cnqtBKjFZ4svAA" target="_blank">
-Open Location
-</a>
-
+<p>📞 Ladies Contact: 7204846606</p>
+<p>پرنسپل: مولانا محمد انصر صاحب شاہی</p>
+<p>آرگنائزر: ھادی ایجوکیشنل اکیڈمی ٹرسٹ بنگلور</p>
 </section>
 
+<!-- FOOTER -->
 <footer>
-
 <p>© 2026 Haadi Educational Academy</p>
-
 </footer>
 
-<a class="whatsapp" href="https://wa.me/919686654172">WhatsApp</a>
+<a class="whatsapp" href="https://wa.me/919686654172" target="_blank">WhatsApp</a>
 
-<script>
+<!-- SCRIPTS -->
+<script type="module">
+// Firebase import
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
-/* LANGUAGE */
+// Firebase Config
+const firebaseConfig = {
+  apiKey: "AIzaSyDbZQzrsjffr_MJzI3mZwOmJDpRxp6fksg",
+  authDomain: "haadi-academy.firebaseapp.com",
+  projectId: "haadi-academy",
+  storageBucket: "haadi-academy.firebasestorage.app",
+  messagingSenderId: "449923679287",
+  appId: "1:449923679287:web:575e69845041f8bdc32bb2"
+};
 
-function toggleLang(){
-document.querySelectorAll(".urdu").forEach(e=>{
-e.style.display=(e.style.display=="block")?"none":"block";
-});
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+// Admin Login
+window.login=function(){
+  let pass=document.getElementById("adminPass").value;
+  if(pass=="haadi123"){ // Change your password here
+    document.getElementById("adminPanel").style.display="block";
+    document.getElementById("loginMsg").innerHTML="Login Success";
+  }else{
+    document.getElementById("loginMsg").innerHTML="Wrong Password";
+  }
 }
 
-/* SLIDER */
+// Add Student
+window.addStudent=async function(){
+  let name=document.getElementById("sname").value;
+  let roll=document.getElementById("sroll").value;
+  let course=document.getElementById("scourse").value;
+  await addDoc(collection(db,"students"),{name:name,roll:roll,course:course});
+  alert("Student Added Successfully");
+}
 
-let imgs=["images/haadi-gallery1.jpg","images/haadi-gallery2.jpg"];
-let i=0;
-setInterval(()=>{
-i=(i+1)%imgs.length;
-document.getElementById("slide").src=imgs[i];
-},3000);
+// Search Student Result
+window.searchStudent=async function(){
+  let roll=document.getElementById("searchRoll").value;
+  const querySnapshot=await getDocs(collection(db,"students"));
+  let found=false;
+  querySnapshot.forEach((doc)=>{
+    let s=doc.data();
+    if(s.roll==roll){
+      document.getElementById("result").innerHTML=
+      "Name: "+s.name+"<br>Course: "+s.course+"<br>Result: PASS";
+      found=true;
+    }
+  });
+  if(!found){document.getElementById("result").innerHTML="Student Not Found";}
+}
 
-/* PRAYER */
+// Admission Form WhatsApp
+window.sendWhatsApp=function(){
+  let name=document.getElementById("name").value;
+  let phone=document.getElementById("phone").value;
+  let course=document.getElementById("course").value;
+  let url="https://wa.me/919686654172?text="
+          +"Admission Request:%0A"
+          +"Name: "+name+"%0A"
+          +"Phone: "+phone+"%0A"
+          +"Course: "+course;
+  window.open(url,'_blank');
+}
 
-fetch("https://api.aladhan.com/v1/timingsByCity?city=Bangalore&country=India&method=2&school=1")
-
-.then(r=>r.json())
-
-.then(d=>{
-let t=d.data.timings;
-document.getElementById("prayer").innerHTML=
-"Fajr "+t.Fajr+"<br>Dhuhr "+t.Dhuhr+"<br>Asr(Hanafi) "+t.Asr+"<br>Maghrib "+t.Maghrib+"<br>Isha "+t.Isha;
+// Prayer Times
+fetch("https://api.aladhan.com/v1/timingsByCity?city=Bangalore&country=India&method=2")
+.then(response=>response.json())
+.then(data=>{
+  let t=data.data.timings;
+  document.getElementById("prayerTimes").innerHTML=
+  "Fajr: "+t.Fajr+" | "+
+  "Dhuhr: "+t.Dhuhr+" | "+
+  "Asr (Hanafi): "+t.Asr+" | "+
+  "Maghrib: "+t.Maghrib+" | "+
+  "Isha: "+t.Isha;
 });
-
 </script>
 
 </body>
