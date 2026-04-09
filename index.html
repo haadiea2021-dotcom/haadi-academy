@@ -4,76 +4,189 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ھادی ایجوکیشنل اکیڈمی | Haadi Educational Academy</title>
-
-<!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Jameel+Noori+Nastaleeq&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
-<!-- Icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 <style>
-/* Global */
-body{margin:0;font-family:'Roboto',sans-serif;background:#f9f9f9;color:#222;}
-.urdu{font-family:'Jameel Noori Nastaleeq', serif;direction:rtl;line-height:2;font-size:20px;}
-h2,h3{margin:10px 0;}
-a{text-decoration:none;color:inherit;}
+/* General */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f6f5;
+    color: #333;
+}
+.urdu {
+    font-family: 'Jameel Noori Nastaleeq', serif;
+    direction: rtl;
+    line-height: 2;
+    font-size: 20px;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+}
 
 /* Header */
-header{background:linear-gradient(to right,#064635,#0b5d44);color:white;text-align:center;padding:50px 20px;position:relative;}
-header img{width:100px;margin-bottom:10px;}
-header h1{font-size:36px;font-weight:700;margin:5px 0;}
-header h2{font-size:28px;margin:5px 0;}
+header {
+    background: linear-gradient(135deg,#0b5d44,#01271c);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+header img {
+    width: 120px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+header h1 {
+    font-size: 36px;
+    margin: 10px 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+header p {
+    font-size: 18px;
+    margin: 5px 0;
+}
 
 /* Navigation */
-nav{background:#021a13;text-align:center;padding:10px;overflow-x:auto;white-space:nowrap;}
-nav a{color:white;margin:0 8px;font-weight:bold;padding:8px 12px;border-radius:6px;transition:0.3s;}
-nav a:hover{background:#0b5d44;}
+nav {
+    background: #021a13;
+    text-align: center;
+    padding: 12px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+nav a {
+    color: white;
+    margin: 0 8px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+nav a:hover {
+    background: #0b5d44;
+    color: #fff;
+}
 
 /* Sections */
-section{margin:20px auto;padding:25px;background:white;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,0.1);}
-h2{text-align:center;color:#0b5d44;font-size:30px;margin-bottom:20px;}
+section {
+    margin: 15px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    background: linear-gradient(145deg,#ffffff,#e0f2f1);
+}
 
-/* Grid */
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;}
-.card{background:#e7f3ef;padding:20px;border-radius:10px;text-align:center;transition:0.3s;}
-.card:hover{transform:translateY(-5px);box-shadow:0 5px 15px rgba(0,0,0,0.2);}
-.notice{background:#fff3cd;padding:15px;border-radius:8px;text-align:center;font-weight:bold;}
-input,textarea{width:100%;padding:10px;margin:8px 0;border:1px solid #ccc;border-radius:6px;}
-button{background:#0b5d44;color:white;border:none;padding:10px 20px;border-radius:6px;cursor:pointer;font-weight:bold;}
-button:hover{background:#064635;}
+/* Section Titles */
+h2 {
+    text-align: center;
+    color: #0b5d44;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+/* Grid Cards */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 15px;
+}
+.card {
+    background: #e7f3ef;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Notice */
+.notice {
+    background:#fff3cd;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Inputs & Buttons */
+input, textarea {
+    width:100%;
+    padding:10px;
+    margin:8px 0;
+    border:1px solid #ccc;
+    border-radius:6px;
+}
+button {
+    background: linear-gradient(135deg,#0b5d44,#01271c);
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:6px;
+    cursor:pointer;
+    font-weight:bold;
+    transition: 0.3s;
+}
+button:hover {
+    background: linear-gradient(135deg,#01271c,#0b5d44);
+}
 
 /* Footer */
-footer{background:#111;color:white;text-align:center;padding:20px;font-size:14px;}
+footer {
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:15px;
+    font-size:14px;
+}
 
-/* WhatsApp button */
-.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:12px 18px;border-radius:30px;font-weight:bold;z-index:100;}
+/* WhatsApp Floating */
+.whatsapp {
+    position:fixed;
+    bottom:15px;
+    right:15px;
+    background:#25D366;
+    color:white;
+    padding:12px 18px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
 
-/* Icons for prayer times */
-.prayer-icon{margin-right:6px;color:#064635;}
+/* Prayer icons */
+.prayer-icon {
+    margin-right:8px;
+    color:#0b5d44;
+}
 
 /* Highlight online/offline classes */
-.highlight{background:#e0f7fa;padding:8px 15px;border-radius:6px;color:#064635;font-weight:bold;display:inline-block;margin:5px;}
+.highlight {
+    background: linear-gradient(135deg,#fff9c4,#ffe082);
+    padding: 8px 12px;
+    border-radius:8px;
+    font-weight:bold;
+    display:inline-block;
+    margin:5px 0;
+}
 </style>
 </head>
-
 <body>
 
-<!-- Header -->
 <header>
-<img src="images/logo.png" alt="Haadi Logo">
-<h1>Haadi Educational Academy</h1>
-<h2 class="urdu">ھادی ایجوکیشنل اکیڈمی</h2>
-<p>Providing Online & Offline Islamic Education for School & College Students (Boys & Girls)</p>
+<img src="images/IMG-logo.png" alt="Haadi Logo">
+<h1>ھادی ایجوکیشنل اکیڈمی</h1>
+<p>Islamic Education for Students / دینی تعلیم طلبہ وطالبات کے لیے</p>
 </header>
 
-<!-- Navigation -->
 <nav>
 <a href="#about">About</a>
 <a href="#courses">Courses</a>
 <a href="#departments">Departments</a>
 <a href="#teachers">Teachers</a>
-<a href="#gallery">Gallery</a>
 <a href="#youtube">YouTube</a>
 <a href="#notice">Notice</a>
 <a href="#prayer">Prayer</a>
@@ -81,117 +194,104 @@ footer{background:#111;color:white;text-align:center;padding:20px;font-size:14px
 <a href="#contact">Contact</a>
 </nav>
 
-<!-- About -->
 <section id="about">
-<h2>About Us / تعارف</h2>
-<p class="urdu">ھادی ایجوکیشنل اکیڈمی، خوشحال نگر، کے جی ہلی بنگلور میں واقع ایک دینی ادارہ ہے جو 2021 میں قائم ہوا۔ اس ادارے کا مقصد طلبہ وطالبات کو علم دین سے آراستہ کرنا ہے۔</p>
-<p>Haadi Educational Academy, established in 2021, provides Islamic education to school & college students (boys & girls).</p>
+<h2>تعارف | About Us</h2>
+<p class="urdu">ھادی ایجوکیشنل اکیڈمی، خوشحال نگر کے جی ہلی بنگلور میں واقع ایک دینی ادارہ ہے جو 2021 میں قائم ہوا۔ اس ادارے کا مقصد طلبہ وطالبات کو علم دین سے آراستہ کرنا ہے۔</p>
+<p>We provide Islamic education for school and college students (boys & girls).</p>
+<p class="urdu"><strong>سرپرست:</strong> حضرت مولانا مفتی محمد اسلم صاحب رشادی وقاسمی</p>
+<p class="urdu"><strong>بانی و سکریٹری:</strong> حضرت مولانا محمد انصر صاحب شاہی</p>
+<p class="urdu"><strong>آرگنائزر:</strong> ھادی ایجوکیشنل اکیڈمی ٹرسٹ بنگلور</p>
 </section>
 
-<!-- Courses -->
 <section id="courses">
-<h2>Courses / کورسز</h2>
+<h2>کورسز | Courses</h2>
 <div class="grid">
-<div class="card"><i class="fa-solid fa-book-open fa-2x"></i><p class="urdu">ناظرہ قرآن</p><p>Nazira Quran</p></div>
-<div class="card"><i class="fa-solid fa-quran fa-2x"></i><p class="urdu">حفظ قرآن</p><p>Hifz Quran</p></div>
-<div class="card"><i class="fa-solid fa-chalkboard-user fa-2x"></i><p class="urdu">دینیات</p><p>Diniyat</p></div>
-<div class="card"><i class="fa-solid fa-language fa-2x"></i><p class="urdu">عربی زبان</p><p>Arabic Language</p></div>
-<div class="card"><i class="fa-solid fa-graduation-cap fa-2x"></i><p class="urdu">تین سالہ علم دین کورس</p><p>3 Year Alim Course</p></div>
+<div class="card"><i class="fas fa-book-open fa-2x"></i><p class="urdu">ناظرہ قرآن</p><p>Nazira Quran</p></div>
+<div class="card"><i class="fas fa-book fa-2x"></i><p class="urdu">حفظ قرآن کورس</p><p>Hifz Quran Course</p></div>
+<div class="card"><i class="fas fa-pray fa-2x"></i><p class="urdu">دینیات</p><p>Diniyat</p></div>
+<div class="card"><i class="fas fa-graduation-cap fa-2x"></i><p class="urdu">3 سالہ علم دین کورس</p><p>3 Year Alim Course</p></div>
 </div>
 </section>
 
-<!-- Departments -->
 <section id="departments">
-<h2>Departments / شعبہ جات</h2>
-<div class="highlight">Online Classes / آن لائن کلاسز</div>
-<div class="highlight">Offline Classes / آفلائن کلاسز</div>
-<div class="highlight">Separate arrangements for Boys & Girls / بچوں اور بچیوں کے لیے علیحدہ انتظام</div>
+<h2>شعبہ جات | Departments</h2>
+<p class="highlight">آن لائن کلاسز / Online Classes</p>
+<p class="highlight">آفلائن کلاسز / Offline Classes</p>
+<p class="highlight">بچوں اور بچیوں کے لیے علیحدہ انتظام</p>
 </section>
 
-<!-- Teachers -->
 <section id="teachers">
-<h2>Teachers / اساتذہ</h2>
+<h2>اساتذہ | Teachers</h2>
 <div class="grid">
 <div class="card">
-<h3>Molana Mohammed Ansar Shahi</h3>
+<h3>مولانا محمد انصر شاہی</h3>
 <p class="urdu">پرنسپل</p>
 <p>Principal</p>
 </div>
-<div class="card">
-<h3>Hazrat Molana Mufti Mohammed Aslam Rashadi Waqasmi</h3>
-<p class="urdu">سرپرست</p>
-<p>Supervisor</p>
-</div>
 </div>
 </section>
 
-<!-- Gallery -->
-<section id="gallery">
-<h2>Gallery / گیلری</h2>
-<div class="grid">
-<div class="card"><img src="images/gallery1.png" alt="Gallery" style="width:100%;border-radius:10px;"></div>
-<div class="card"><img src="images/gallery2.png" alt="Gallery" style="width:100%;border-radius:10px;"></div>
-<div class="card"><img src="images/gallery3.png" alt="Gallery" style="width:100%;border-radius:10px;"></div>
-</div>
-</section>
-
-<!-- YouTube -->
 <section id="youtube">
 <h2>YouTube Channels / یوٹیوب چینلز</h2>
 <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:15px;">
 <div class="card">
-<h3 class="urdu">ہادی ایجوکیشنل اکیڈمی</h3>
+<h3 class="urdu">ھادی ایجوکیشنل اکیڈمی</h3>
 <iframe width="100%" height="200" src="https://www.youtube.com/embed?listType=user_uploads&list=haadieducationalacadamy" frameborder="0" allowfullscreen></iframe>
-<a href="https://youtube.com/@haadieducationalacadamy" target="_blank" style="background:red;color:white;padding:10px 20px;border-radius:6px;display:inline-block;margin-top:5px;">Subscribe</a>
+<a href="https://youtube.com/@haadieducationalacadamy" target="_blank" style="background:red;color:white;padding:10px 20px;border-radius:6px;text-decoration:none;display:inline-block;margin-top:5px;">Subscribe @HadiAcademy</a>
 </div>
 <div class="card">
-<h3 class="urdu">مولانامحمدانصرشاہی آفیشیل</h3>
+<h3 class="urdu">مولانا محمد انصر شاہی آفیشل</h3>
 <iframe width="100%" height="200" src="https://www.youtube.com/embed?listType=user_uploads&list=maulanaansarshahiofficial" frameborder="0" allowfullscreen></iframe>
-<a href="https://youtube.com/@maulanaansarshahiofficial?si=7vyHjiBsNGysp7Ft" target="_blank" style="background:red;color:white;padding:10px 20px;border-radius:6px;display:inline-block;margin-top:5px;">Subscribe</a>
+<a href="https://youtube.com/@maulanaansarshahiofficial?si=7vyHjiBsNGysp7Ft" target="_blank" style="background:red;color:white;padding:10px 20px;border-radius:6px;text-decoration:none;display:inline-block;margin-top:5px;">Subscribe @MaulanaAnsarShahiOfficial</a>
 </div>
 </div>
 </section>
 
-<!-- Notice -->
 <section id="notice">
 <h2>Notice Board / نوٹس بورڈ</h2>
-<div class="notice"><p class="urdu">داخلے شروع 2026، اسلامی سمر کیمپ، قرآن مقابلہ</p></div>
+<div class="notice">
+<p class="urdu">داخلے شروع 2026، اسلامی سمر کیمپ، قرآن مقابلہ</p>
+<p>Admissions Open 2026, Islamic Summer Camp, Quran Competition</p>
+</div>
 </section>
 
-<!-- Prayer Times -->
 <section id="prayer">
-<h2>Prayer Times / نماز کے اوقات (Bangalore)</h2>
-<div id="prayerTimes" style="text-align:center; font-weight:bold;"></div>
+<h2>نماز کے اوقات | Prayer Times (Bangalore)</h2>
+<div id="prayerTimes" style="text-align:center;font-weight:bold;">
+<p><i class="fas fa-sun prayer-icon"></i>Fajr: Loading...</p>
+<p><i class="fas fa-sun prayer-icon"></i>Dhuhr: Loading...</p>
+<p><i class="fas fa-sun prayer-icon"></i>Asr (Hanafi): Loading...</p>
+<p><i class="fas fa-sun prayer-icon"></i>Maghrib: Loading...</p>
+<p><i class="fas fa-moon prayer-icon"></i>Isha: Loading...</p>
+</div>
 </section>
 
-<!-- Admission -->
 <section id="admission">
 <h2>Admission Form / داخلہ فارم</h2>
 <input id="name" placeholder="Name / نام">
 <input id="phone" placeholder="Phone / فون">
 <textarea id="course" placeholder="Course / کورس"></textarea>
-<button onclick="sendWhatsApp()">Submit</button>
+<button onclick="sendWhatsApp()">جمع کریں / Submit</button>
 </section>
 
-<!-- Contact -->
 <section id="contact">
 <h2>Contact / رابطہ</h2>
-<p>📍 خوشحال نگر، کے جی ہلی، بنگلور</p>
-<p>📞 General: 9686654172 / 9108226606</p>
-<p>📞 For women: 7204846606</p>
-<p>Organizer: Haadi Educational Academy Trust, Bangalore</p>
-<iframe width="100%" height="250" src="https://maps.google.com/maps?q=kg%20halli%20bangalore&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+<p>📍 خوشحال نگر کے جی ہلی بنگلور</p>
+<p>📞 عمومی رابطہ: 9686654172 / 9108226606</p>
+<p>📞 مستورات کے لیے رابطہ: 7204846606</p>
+<p>پرنسپل: مولانا محمد انصر صاحب شاہی</p>
+<p>آرگنائزر: ھادی ایجوکیشنل اکیڈمی ٹرسٹ بنگلور</p>
+<iframe width="100%" height="250" src="https://maps.google.com/maps?q=kg%20halli%20bangalore&t=&z=13&ie=UTF8&iwloc=&output=embed" style="border-radius:12px;"></iframe>
 </section>
 
-<!-- Footer -->
 <footer>
 <p>© 2026 Haadi Educational Academy</p>
 </footer>
 
-<a class="whatsapp" href="https://wa.me/919686654172" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+<a class="whatsapp" href="https://wa.me/919686654172" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
 
 <script>
-// Prayer Times Hanafi Asr
+// Prayer Times with correct Hanafi Asr
 function formatTime24to12(time24){
     let [h,m]=time24.split(":").map(Number);
     let suffix=h>=12?"PM":"AM";
@@ -203,12 +303,13 @@ fetch("https://api.aladhan.com/v1/timingsByCity?city=Bangalore&country=India&met
 .then(r=>r.json())
 .then(data=>{
     let t=data.data.timings;
-    document.getElementById("prayerTimes").innerHTML=
-        "<i class='fa-solid fa-sun prayer-icon'></i>Fajr: "+formatTime24to12(t.Fajr)+" | "+
-        "<i class='fa-solid fa-sun prayer-icon'></i>Dhuhr: "+formatTime24to12(t.Dhuhr)+" | "+
-        "<i class='fa-solid fa-sun prayer-icon'></i>Asr (Hanafi): "+formatTime24to12(t.Asr)+" | "+
-        "<i class='fa-solid fa-moon prayer-icon'></i>Maghrib: "+formatTime24to12(t.Maghrib)+" | "+
-        "<i class='fa-solid fa-moon prayer-icon'></i>Isha: "+formatTime24to12(t.Isha);
+    let html='';
+    html+='<p><i class="fas fa-sun prayer-icon"></i>Fajr: '+formatTime24to12(t.Fajr)+'</p>';
+    html+='<p><i class="fas fa-sun prayer-icon"></i>Dhuhr: '+formatTime24to12(t.Dhuhr)+'</p>';
+    html+='<p><i class="fas fa-sun prayer-icon"></i>Asr (Hanafi): '+formatTime24to12(t.Asr)+'</p>';
+    html+='<p><i class="fas fa-sun prayer-icon"></i>Maghrib: '+formatTime24to12(t.Maghrib)+'</p>';
+    html+='<p><i class="fas fa-moon prayer-icon"></i>Isha: '+formatTime24to12(t.Isha)+'</p>';
+    document.getElementById("prayerTimes").innerHTML=html;
 });
 
 // WhatsApp Admission Form
